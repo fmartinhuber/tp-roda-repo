@@ -3,11 +3,11 @@ package interfaces;
 import java.rmi.*;
 import java.util.List;
 
-import beans.*;
+import dto.*;
 
-public interface ManejoDatos extends Remote {
+public interface IAdministracionOV extends Remote {
 
 	// public List<ReparacionDto> obtenerReparaciones() throws RemoteException;	
-	public List<RodamientoBean> obtenerRodamientos() throws RemoteException;
+	public List<RodamientoDto> obtenerRodamientos() throws RemoteException;
 	
 }
