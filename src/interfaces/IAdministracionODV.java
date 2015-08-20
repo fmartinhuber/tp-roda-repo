@@ -5,7 +5,7 @@ import java.util.List;
 
 import dto.*;
 
-public interface IAdministracionOV extends Remote {
+public interface IAdministracionODV extends Remote {
 
 	// public List<ReparacionDto> obtenerReparaciones() throws RemoteException;	
 	public List<RodamientoDto> obtenerRodamientos() throws RemoteException;
