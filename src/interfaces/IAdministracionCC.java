@@ -1,5 +1,7 @@
 package interfaces;
 
-public class IAdministracionCC {
+import java.rmi.Remote;
+
+public interface IAdministracionCC extends Remote {
 
 }
