@@ -8,14 +8,11 @@ import java.util.List;
 
 
 
-public class CotizacionDto implements Serializable
-{
-	/**
-	 * 
-	 */
+public class CotizacionDto implements Serializable{
+	
 	private static final long serialVersionUID = 1L;
 	private List<ItemCotizacionDto> items;
-	private int numero;
+	private int idCotizacion;
 	private String estado;
 	
 	private ClienteDto cliente;
@@ -46,12 +43,13 @@ public class CotizacionDto implements Serializable
 	public void setItems(List<ItemCotizacionDto> items) {
 		this.items = items;
 	}
-	public int getNumero() {
-		return numero;
+	public int getIdCotizacion() {
+		return idCotizacion;
 	}
-	public void setNumero(int numero) {
-		this.numero = numero;
+	public void setIdCotizacion(int idCotizacion) {
+		this.idCotizacion = idCotizacion;
 	}
+
 	public String getEstado() {
 		return estado;
 	}

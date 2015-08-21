@@ -6,20 +6,19 @@ import java.io.Serializable;
 
 
 
-public class ClienteDto implements Serializable
-{
-	/**
-	 * 
-	 */
-	
+public class ClienteDto implements Serializable{
+
 	private static final long serialVersionUID = 1L;
 	private String razonSocial;
 	private String mail;
 	private int CUIT;
-	private int numero;
+	private int idCliente;
 	private int unidades;
 	private int meses;
 	private int operaciones;
+	
+	
+	
 	public int getUnidades() {
 		return unidades;
 	}
@@ -57,12 +56,11 @@ public class ClienteDto implements Serializable
 	public void setCUIT(int cUIT) {
 		CUIT = cUIT;
 	}
-	public int getNumero() {
-		return numero;
+	public int getIdCliente() {
+		return idCliente;
 	}
-	public void setNumero(int numero) {
-		this.numero = numero;
+	public void setIdCliente(int idCliente) {
+		this.idCliente = idCliente;
 	}
-	
-	
+		
 }
