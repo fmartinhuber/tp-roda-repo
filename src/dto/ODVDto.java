@@ -5,18 +5,15 @@ import java.util.List;
 
 
 
-public class ODVDto implements Serializable
-{
-	/**
-	 * 
-	 */
+public class ODVDto implements Serializable{
+
 	private static final long serialVersionUID = 1L;
 	private List <ClienteDto> clientes;
 	private List <FacturaDto> facturas;
 	private List <RemitoDto> remitos;
 	private List <ProveedorDto> proveedores;
 	private List <CotizacionDto> cotizaciones;
-	private List <OrdenPedidoDto> ordenesC;
+	
 	public List<ClienteDto> getClientes() {
 		return clientes;
 	}
@@ -46,12 +43,6 @@ public class ODVDto implements Serializable
 	}
 	public void setCotizaciones(List<CotizacionDto> cotizaciones) {
 		this.cotizaciones = cotizaciones;
-	}
-	public List<OrdenPedidoDto> getOrdenesC() {
-		return ordenesC;
-	}
-	public void setOrdenesC(List<OrdenPedidoDto> ordenesC) {
-		this.ordenesC = ordenesC;
 	}
 	public String getCentroIndustrial() {
 		return centroIndustrial;

@@ -7,20 +7,19 @@ import java.util.List;
 
 
 
-public class FacturaDto implements Serializable
-{
-	/**
-	 * 
-	 */
+public class FacturaDto implements Serializable{
+	
 	private static final long serialVersionUID = 1L;
 	private int numero;
 	private String estado;
 	private Date fecha;
 	private ClienteDto cliente;
-	private OrdenPedidoDto pedido; 
-	private float descuento; 
-	private List <ItemFacturaDto> items; 
+	private float descuento;
+	private List <ItemFacturaDto> items;
 	private float total;
+	
+	
+	
 	public float getTotal() {
 		return total;
 	}
@@ -32,12 +31,6 @@ public class FacturaDto implements Serializable
 	}
 	public void setItems(List<ItemFacturaDto> items) {
 		this.items = items;
-	}
-	public OrdenPedidoDto getPedido() {
-		return pedido;
-	}
-	public void setPedido(OrdenPedidoDto pedido) {
-		this.pedido = pedido;
 	}
 	public int getNumero() {
 		return numero;

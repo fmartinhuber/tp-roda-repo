@@ -4,17 +4,17 @@ import java.io.Serializable;
 import java.util.List;
 
 
-public class OrdenCompraDto implements Serializable
-{
-	/**
-	 * 
-	 */
+public class OrdenCompraDto implements Serializable{
+
 	private static final long serialVersionUID = 1L;
 	private int numero;
 	private String formaPago;
 	private float total;	
 	private float descuento;
 	private List <ItemOrdenCompraDto> items;
+	
+	
+	
 	public String getFormaPago() {
 		return formaPago;
 	}

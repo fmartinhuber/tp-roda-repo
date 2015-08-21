@@ -2,18 +2,15 @@ package dto;
 
 import java.io.Serializable;
 
-public class ItemFacturaDto implements Serializable
-{
-	/**
-	 * 
-	 */
+public class ItemFacturaDto implements Serializable{
+
 	private static final long serialVersionUID = 1L;
-	private OrdenPedidoDto orden;  
+	private CotizacionDto orden;  
 	private float subtotal;
-	public OrdenPedidoDto getOrden() {
+	public CotizacionDto getOrden() {
 		return orden;
 	}
-	public void setOrden(OrdenPedidoDto orden) {
+	public void setOrden(CotizacionDto orden) {
 		this.orden = orden;
 	}
 	public float getSubtotal() {
@@ -22,4 +19,6 @@ public class ItemFacturaDto implements Serializable
 	public void setSubtotal(float subtotal) {
 		this.subtotal = subtotal;
 	}
+	
+	
 }
