@@ -21,6 +21,7 @@ public class RodamientoDto implements Serializable
 	private int serie;
 	private String origen;
 	private float monto;
+	private ProveedorDto proveedor;
 	
 	public float getMonto() {
 		return monto;
@@ -81,5 +82,11 @@ public class RodamientoDto implements Serializable
 	}
 	public void setPais(String pais) {
 		this.pais = pais;
+	}
+	public ProveedorDto getProveedor() {
+		return proveedor;
+	}
+	public void setProveedor(ProveedorDto proveedor) {
+		this.proveedor = proveedor;
 	}
 }
