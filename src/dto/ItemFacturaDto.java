@@ -7,6 +7,19 @@ public class ItemFacturaDto implements Serializable{
 	private static final long serialVersionUID = 1L;
 	private CotizacionDto orden;  
 	private float subtotal;
+	
+	
+	
+	public ItemFacturaDto(CotizacionDto orden, float subtotal) {
+		super();
+		this.orden = orden;
+		this.subtotal = subtotal;
+	}
+	
+	public ItemFacturaDto(){
+		
+	}
+	
 	public CotizacionDto getOrden() {
 		return orden;
 	}

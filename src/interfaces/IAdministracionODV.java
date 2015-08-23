@@ -1,29 +1,16 @@
 package interfaces;
 
 import java.rmi.*;
-import java.util.List;
+import java.util.*;
 
 import utils.*;
 import dto.*;
 
-/**
- * @author Daro:
- * Modo de interaccion del sistema
- * Proveedores <-> CC <-> OV <-> Clientes
- * Proveedores <-> Sistema <-> Clientes
- */
+
+
 public interface IAdministracionODV extends Remote {
-	
-	
-	/**
-	 * Esto quedo, ver para que se usa
-	 * @return List<RodamientoDto>
-	 * @throws RemoteException
-	 */
-	public List<RodamientoDto> obtenerRodamientos() throws RemoteException;
-	
-	
-	/** Oficina de Venta - Punto 1
+		
+	/** Oficina de Venta - Punto 1 - Cotización de Solicitud de Rodamiento
 	 * Consiste en la cotización al cliente de los rodamientos solicitados y este proceso se efectúa
 	 * para cada pedido de cotización de los clientes.
 	 * 
@@ -37,7 +24,8 @@ public interface IAdministracionODV extends Remote {
 	public CotizacionDto generarCotizacion	(List <Item> listaItems, ClienteDto cliente) throws RemoteException;
 	
 	
-	/** Oficina de Venta - Punto 2
+	
+	/** Oficina de Venta - Punto 2 - Venta de rodamientos
 	 * Consiste en la venta  al cliente de los ítems indicados  en un pedido de venta. 
 	 * Los ítems pueden hacer referencia o no, a una o varias solicitudes de cotización anteriores, 
 	 * la cual pueden estar vigentes o no.
@@ -51,7 +39,8 @@ public interface IAdministracionODV extends Remote {
 	public FacturaDto generarFactura (ClienteDto cliente, List<CotizacionDto> cotizaciones) throws RemoteException;
 	
 	
-	/** Oficina de Venta - Punto 3
+	
+	/** Oficina de Venta - Punto 3 - Logística de Entrega de Pedidos
 	 * Consiste en la recepción de la mercadería enviada por la CC a las correspondientes OV para la confección 
 	 * de los envíos correspondientes y su posterior despacho a cada cliente, junto con la factura 
 	 * y el remito correspondiente.
@@ -66,4 +55,27 @@ public interface IAdministracionODV extends Remote {
 	 */
 	public EnvioAOVDto entregaPedidos (RemitoDto remito) throws RemoteException;
 	
+	
+	
+	/** Oficina de Venta - Punto 4 - Administración de clientes
+	 * Consiste en el ABM de la cartera de clientes. Los clientes pueden ser industrias, talleres, fábricas y revendedores 
+	 * de rodamientos.
+	 * 
+	 * @author Daro: ABM de Clientes, lo hago unificado para no tener 3 metodos distintos. El parametro 'accion' tendra 
+	 * el string de la accion a realizar (Alta, Baja, Modificacion), y el metodo se encargara de resolverlo
+	 *
+	 * @param ClienteDto, String
+	 * @return Boolean
+	 * @throws RemoteException
+	 */
+	public boolean abmCliente (ClienteDto cliente, String accion) throws RemoteException;
+	
+	
+	
+	/**
+	 * Esto quedo, ver para que se usa
+	 * @return List<RodamientoDto>
+	 * @throws RemoteException
+	 */
+	public List<RodamientoDto> obtenerRodamientos() throws RemoteException;
 }

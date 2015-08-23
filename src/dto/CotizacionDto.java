@@ -1,9 +1,9 @@
 package dto;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
+
+
 
 /**
  * 	@author Daro
@@ -21,6 +21,19 @@ public class CotizacionDto implements Serializable{
 	
 	
 	
+	public CotizacionDto(List<ItemCotizacionDto> items, String estado,
+			ClienteDto cliente, Date fecha) {
+		super();
+		this.items = items;
+		this.estado = estado;
+		this.cliente = cliente;
+		this.fecha = fecha;
+	}
+	
+	public CotizacionDto(){
+		
+	}
+
 	public Date getFecha() {
 		return fecha;
 	}
@@ -29,27 +42,29 @@ public class CotizacionDto implements Serializable{
 		this.fecha = fecha;
 	}
 
-	public CotizacionDto()
-	{
-		items=new ArrayList <ItemCotizacionDto>();
-	}
-	
 	public ClienteDto getCliente() {
 		return cliente;
 	}
+	
 	public void setCliente(ClienteDto cliente) {
 		this.cliente = cliente;
 	}
+	
 	public List<ItemCotizacionDto> getItems() {
 		return items;
 	}
+	
 	public void setItems(List<ItemCotizacionDto> items) {
 		this.items = items;
 	}
+	
 	public String getEstado() {
 		return estado;
 	}
+	
 	public void setEstado(String estado) {
 		this.estado = estado;
 	}
+	
+	
 }
