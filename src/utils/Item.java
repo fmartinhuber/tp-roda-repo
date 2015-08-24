@@ -12,6 +12,8 @@ public class Item {
 		this.rodamiento = rodamiento;
 		this.cantidad = cantidad;
 	}
+	
+	public Item(){};
 
 
 	public RodamientoDto getRodamiento() {
