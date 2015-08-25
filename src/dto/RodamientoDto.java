@@ -16,9 +16,10 @@ public class RodamientoDto implements Serializable{
 	private String caracteristicas;
 	private int serie;
 	private String origen;
+	private String marca;
 	private float monto;
 	private ProveedorDto proveedor;
-	private String descripcion; 	
+	private String descripcion;
 	
 	
 	public RodamientoDto(String tipo, String codigo, int stock, int medida,
@@ -136,6 +137,14 @@ public class RodamientoDto implements Serializable{
 
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
+	}
+
+	public String getMarca() {
+		return marca;
+	}
+
+	public void setMarca(String marca) {
+		this.marca = marca;
 	}
 	
 	

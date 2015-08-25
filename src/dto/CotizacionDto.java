@@ -19,8 +19,6 @@ public class CotizacionDto implements Serializable{
 	private ClienteDto cliente;
 	private Date fecha;
 	
-	
-	
 	public CotizacionDto(List<ItemCotizacionDto> items, String estado,
 			ClienteDto cliente, Date fecha) {
 		super();
