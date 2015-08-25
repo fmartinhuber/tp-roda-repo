@@ -5,7 +5,7 @@ import java.util.List;
 
 
 
-public class ODVDto implements Serializable{
+public class OVto implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 	private List <ClienteDto> clientes;
@@ -17,7 +17,7 @@ public class ODVDto implements Serializable{
 		
 	
 	
-	public ODVDto(List<ClienteDto> clientes, List<FacturaDto> facturas,
+	public OVto(List<ClienteDto> clientes, List<FacturaDto> facturas,
 			List<RemitoDto> remitos, List<ProveedorDto> proveedores,
 			List<CotizacionDto> cotizaciones, String centroIndustrial) {
 		super();
@@ -29,7 +29,7 @@ public class ODVDto implements Serializable{
 		this.centroIndustrial = centroIndustrial;
 	}
 	
-	public ODVDto(){
+	public OVto(){
 		
 	}
 

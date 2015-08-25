@@ -18,7 +18,7 @@ public class RodamientoDto implements Serializable{
 	private String origen;
 	private float monto;
 	private ProveedorDto proveedor;
-		
+	private String descripcion; 	
 	
 	
 	public RodamientoDto(String tipo, String codigo, int stock, int medida,
@@ -128,6 +128,14 @@ public class RodamientoDto implements Serializable{
 	
 	public void setProveedor(ProveedorDto proveedor) {
 		this.proveedor = proveedor;
+	}
+
+	public String getDescripcion() {
+		return descripcion;
+	}
+
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
 	}
 	
 	
