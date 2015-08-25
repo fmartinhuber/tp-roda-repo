@@ -13,8 +13,6 @@ public class CCDto implements Serializable{
 	private List <RodamientoDto> rodamientos;
 	private List <RodamientoDto> listaComparativa ;
 	
-	
-	
 	public CCDto(List<OrdenCompraDto> ordenesP,
 			List<RodamientoDto> rodamientos,
 			List<RodamientoDto> listaComparativa) {
