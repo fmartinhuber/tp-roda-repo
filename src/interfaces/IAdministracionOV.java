@@ -12,13 +12,14 @@ public interface IAdministracionOV extends Remote {
 		
 	/** 
 	 * Oficina de Venta - Punto 1 - Cotización de Solicitud de Rodamiento
-	 * Consiste en la cotización al cliente de los rodamientos solicitados y este proceso se efectúa
-	 * para cada pedido de cotización de los clientes.
+	 * Formalmente: Consiste en la cotización al cliente de los rodamientos solicitados y este proceso 
+	 * se efectúa para cada pedido de cotización de los clientes.
 	 * 
-	 * @author Daro: Este metodo se encarga de devolverte la Cotizacion que le pediste, siendo cada "item" 
-	 * pedido un itemCotizacion
+	 * Coloquialmente: Este metodo se encarga de devolverte la Cotizacion que le pediste, siendo 
+	 * cada "item" pedido un itemCotizacion. Levanta el XML que se genera cuando el cliente hace el
+	 * pedido por la pagina web y con eso genera la Cotizacion
 	 * 
-	 * Autor: DARO 
+	 * Lo hace: Daro 
 	 * 
 	 * @param List <Item> (Utilidad, rodamiento con su cantidad), ClienteDto
 	 * @return CotizacionDto
@@ -28,14 +29,15 @@ public interface IAdministracionOV extends Remote {
 	
 	
 	
-	/** Oficina de Venta - Punto 2 - Venta de rodamientos
-	 * Consiste en la venta  al cliente de los ítems indicados  en un pedido de venta. 
+	/** 
+	 * Oficina de Venta - Punto 2 - Venta de rodamientos
+	 * Formalmente: Consiste en la venta  al cliente de los ítems indicados  en un pedido de venta. 
 	 * Los ítems pueden hacer referencia o no, a una o varias solicitudes de cotización anteriores, 
 	 * la cual pueden estar vigentes o no.
 	 * 
-	 * Genera la factura para un cliente con todas sus cotizaciones realizadas
+	 * Coloquialmente: Genera la factura para un cliente con todas sus cotizaciones realizadas
 	 * 
-	 * Autor: RAMA
+	 * Lo hace: Rama
 	 * 
 	 * @param ClienteDto, List<CotizacionDto>
 	 * @return FacturaDto
@@ -47,15 +49,15 @@ public interface IAdministracionOV extends Remote {
 	
 	/** 
 	 * Oficina de Venta - Punto 3 - Logística de Entrega de Pedidos
-	 * Consiste en la recepción de la mercadería enviada por la CC a las correspondientes OV para la confección 
-	 * de los envíos correspondientes y su posterior despacho a cada cliente, junto con la factura 
+	 * Formalmente: Consiste en la recepción de la mercadería enviada por la CC a las correspondientes OV para 
+	 * la confección de los envíos correspondientes y su posterior despacho a cada cliente, junto con la factura 
 	 * y el remito correspondiente.
 	 * 
-	 * EnvioAOVDto es la clase que se genera cuando CC le pasa las cosas a la OV, este metodo
+	 * Coloquialmente: EnvioAOVDto es la clase que se genera cuando CC le pasa las cosas a la OV, este metodo
 	 * usa el Remito para generar esta nueva clase, la cual sera usada por la OV de aca en mas. Es solo una 
 	 * transformacion de documento
 	 * 
-	 * AUTOR: DARO
+	 * Lo hace: Daro
 	 * 
 	 * @param RemitoDto
 	 * @return EnvioAOVDto
@@ -65,12 +67,18 @@ public interface IAdministracionOV extends Remote {
 	
 	
 	
-	/** Oficina de Venta - Punto 4 - Administración de clientes
-	 * Consiste en el ABM de la cartera de clientes. Los clientes pueden ser industrias, talleres, fábricas y revendedores 
-	 * de rodamientos.
+	/** 
+	 * Oficina de Venta - Punto 4 - Administración de clientes
+	 * Formalmente: Consiste en el ABM de la cartera de clientes. Los clientes pueden ser industrias, talleres, 
+	 * fábricas y revendedores de rodamientos.
 	 * 
-	 * ABM de Clientes, lo hago unificado para no tener 3 metodos distintos. El parametro 'accion' tendra 
-	 * el string de la accion a realizar (Alta, Baja, Modificacion), y el metodo se encargara de resolverlo
+	 * Coloquialmente: ABM de Clientes, lo hago unificado para no tener 3 metodos distintos. El parametro 'accion' 
+	 * tendra el string de la accion a realizar (Alta, Baja, Modificacion, Consulta), y el metodo se encargara 
+	 * de resolverlo internamente (Ej: Si el parametro es alta, hace el alta y devuelve true si se realizo correctamente)
+	 * (Depende de la accion que se pida, los atributos que seran utilizados por el cliente. Ej: Para una baja solo
+	 * se necesitaria un atributo unico del cliente, el DNI)
+	 * 
+	 * Lo hace: Rama
 	 *
 	 * @param ClienteDto, String
 	 * @return Boolean
