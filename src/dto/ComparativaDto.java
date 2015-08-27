@@ -2,7 +2,12 @@ package dto;
 
 import java.util.List;
 
-public class comparativaDto {
+/**
+ * @author Daro: Martin, esto ahora esta en Negocio. Se deberia borrar aca de DTO creo, fijate
+ *
+ */
+
+public class ComparativaDto {
 
 	/**
 	 * La principal listado a consultar los rodamientos.

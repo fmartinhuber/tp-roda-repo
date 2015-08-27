@@ -16,7 +16,7 @@ public interface IAdministracionCC extends Remote {
 	 * Coloquialmente: ABM de Proveedores, lo hago unificado para no tener 3 metodos distintos. El parametro 'accion' 
 	 * tendra el string de la accion a realizar (Alta, Baja, Modificacion, Consulta), y el metodo se encargara de resolverlo
 	 * 
-	 * Lo hace: Rama
+	 * Lo hace: A definir (Esto deberia ser lo ultimo en hacerse)
 	 *
 	 * @param ProveedorDto, String
 	 * @return Boolean
@@ -84,13 +84,13 @@ public interface IAdministracionCC extends Remote {
 	 * Punto 6.
 	 * Formalmente: Consiste en la actualizacion del stock a partir de la orden de compra
 	 * 
-	 * Coloquialmente: ABM de Stock. Recibe una lista de rodamientos y un String accion, el cual indicara
+	 * Coloquialmente: Casi un ABM de Stock. Recibe una lista de rodamientos y un String accion, el cual indicara
 	 * como en los otros ABM que se debe hacer con esos rodamientos (Cuando se compra se hace Alta, cuando se vende
 	 * se hace Baja). Tanto en Altas como Bajas el metodo debe actualizar los precios del stock con el 
 	 * precio promedio de mercado (de donde saco esto??)
 	 * OJO: Muchas restricciones que lo hacen complejo
 	 * 	 
-	 * Autor: A definir
+	 * Autor: Rama
 	 * 
 	 * @param List <RodamientoDto>
 	 * @return void
