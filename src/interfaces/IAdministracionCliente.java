@@ -26,6 +26,6 @@ public interface IAdministracionCliente extends Remote {
 	
 	public ClienteDto obtenerCliente(int CUIT) throws RemoteException;
 	
-	public List<ClienteBean> listarClientes() throws RemoteException;
+	public List<ClienteDto> listarClientes() throws RemoteException;
 	
 }
