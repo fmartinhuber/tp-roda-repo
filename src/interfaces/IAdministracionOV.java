@@ -25,7 +25,7 @@ public interface IAdministracionOV extends Remote {
 	 * @return CotizacionDto
 	 * @throws RemoteException
 	 */
-	public CotizacionDto crearCotizacion(List <Item> listaItems, ClienteDto cliente) throws RemoteException;
+	public CotizacionDto crearCotizacion(List <ItemDto> listaItems, ClienteDto cliente) throws RemoteException;
 	
 	
 	
@@ -78,7 +78,7 @@ public interface IAdministracionOV extends Remote {
 	 * (Depende de la accion que se pida, los atributos que seran utilizados por el cliente. Ej: Para una baja solo
 	 * se necesitaria un atributo unico del cliente, el DNI)
 	 * 
-	 * Lo hace: Rama
+	 * Lo hace: A definir (Esto deberia ser lo ultimo en hacerse)
 	 *
 	 * @param ClienteDto, String
 	 * @return Boolean

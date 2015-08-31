@@ -17,52 +17,63 @@ public class CotizacionDto implements Serializable{
 	private List<ItemCotizacionDto> items;
 	private String estado;
 	private ClienteDto cliente;
-	private Date fecha;
+	private Date fechaCreacion;
+	private Date fechaVigencia;
+	
+	
 	
 	public CotizacionDto(List<ItemCotizacionDto> items, String estado,
-			ClienteDto cliente, Date fecha) {
+			ClienteDto cliente, Date fechaCreacion, Date fechaVigencia) {
 		super();
 		this.items = items;
 		this.estado = estado;
 		this.cliente = cliente;
-		this.fecha = fecha;
+		this.fechaCreacion = fechaCreacion;
+		this.fechaVigencia = fechaVigencia;
 	}
-	
+
 	public CotizacionDto(){
 		
 	}
 
-	public Date getFecha() {
-		return fecha;
+	public List<ItemCotizacionDto> getItems() {
+		return items;
 	}
 
-	public void setFecha(Date fecha) {
-		this.fecha = fecha;
+	public void setItems(List<ItemCotizacionDto> items) {
+		this.items = items;
+	}
+
+	public String getEstado() {
+		return estado;
+	}
+
+	public void setEstado(String estado) {
+		this.estado = estado;
 	}
 
 	public ClienteDto getCliente() {
 		return cliente;
 	}
-	
+
 	public void setCliente(ClienteDto cliente) {
 		this.cliente = cliente;
 	}
-	
-	public List<ItemCotizacionDto> getItems() {
-		return items;
+
+	public Date getFechaCreacion() {
+		return fechaCreacion;
 	}
-	
-	public void setItems(List<ItemCotizacionDto> items) {
-		this.items = items;
+
+	public void setFechaCreacion(Date fechaCreacion) {
+		this.fechaCreacion = fechaCreacion;
 	}
-	
-	public String getEstado() {
-		return estado;
+
+	public Date getFechaVigencia() {
+		return fechaVigencia;
 	}
-	
-	public void setEstado(String estado) {
-		this.estado = estado;
+
+	public void setFechaVigencia(Date fechaVigencia) {
+		this.fechaVigencia = fechaVigencia;
 	}
-	
 	
 }
