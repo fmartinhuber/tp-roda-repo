@@ -43,7 +43,7 @@ public interface IAdministracionOV extends Remote {
 	 * @return FacturaDto
 	 * @throws RemoteException
 	 */
-	public FacturaDto crearFactura (ClienteDto cliente, List<CotizacionDto> cotizaciones) throws RemoteException;
+	public FacturaDto crearFactura (ClienteDto cliente, CotizacionDto cotizacion) throws RemoteException;
 	
 	
 	

@@ -11,8 +11,8 @@ public class OrdenCompraDto implements Serializable{
 	private float total;	
 	private float descuento;
 	private List <ItemOrdenCompraDto> items;
-		
-	
+	private ProveedorDto proveedor; 	
+	private List <CotizacionDto> listaCotizaciones;
 	
 	public OrdenCompraDto(String formaPago, float total,
 			float descuento, List<ItemOrdenCompraDto> items) {
@@ -57,6 +57,22 @@ public class OrdenCompraDto implements Serializable{
 	
 	public void setItems(List<ItemOrdenCompraDto> items) {
 		this.items = items;
+	}
+
+	public ProveedorDto getProveedor() {
+		return proveedor;
+	}
+
+	public void setProveedor(ProveedorDto proveedor) {
+		this.proveedor = proveedor;
+	}
+
+	public List <CotizacionDto> getListaCotizaciones() {
+		return listaCotizaciones;
+	}
+
+	public void setListaCotizaciones(List <CotizacionDto> listaCotizaciones) {
+		this.listaCotizaciones = listaCotizaciones;
 	}
 	
 	

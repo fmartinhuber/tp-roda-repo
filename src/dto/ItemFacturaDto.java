@@ -2,17 +2,20 @@ package dto;
 
 import java.io.Serializable;
 
+/**
+ * @author Martin
+ *	Los rodamientos los sacas de los items de cotizacion. 
+ */
 public class ItemFacturaDto implements Serializable{
 
 	private static final long serialVersionUID = 1L;
-	private CotizacionDto orden;  
+	private RodamientoDto rodamiento;  
 	private float subtotal;
+	private int cantidad; 
 	
-	
-	
-	public ItemFacturaDto(CotizacionDto orden, float subtotal) {
+	public ItemFacturaDto(RodamientoDto rodamiento, float subtotal) {
 		super();
-		this.orden = orden;
+		this.rodamiento = rodamiento;
 		this.subtotal = subtotal;
 	}
 	
@@ -20,17 +23,25 @@ public class ItemFacturaDto implements Serializable{
 		
 	}
 	
-	public CotizacionDto getOrden() {
-		return orden;
+	public RodamientoDto getOrden() {
+		return rodamiento;
 	}
-	public void setOrden(CotizacionDto orden) {
-		this.orden = orden;
+	public void setOrden(RodamientoDto rodamiento) {
+		this.rodamiento = rodamiento;
 	}
 	public float getSubtotal() {
 		return subtotal;
 	}
 	public void setSubtotal(float subtotal) {
 		this.subtotal = subtotal;
+	}
+
+	public int getCantidad() {
+		return cantidad;
+	}
+
+	public void setCantidad(int cantidad) {
+		this.cantidad = cantidad;
 	}
 	
 	

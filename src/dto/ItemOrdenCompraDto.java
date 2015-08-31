@@ -7,8 +7,9 @@ import java.io.Serializable;
 public class ItemOrdenCompraDto implements Serializable{
 
 	private static final long serialVersionUID = 1L;
-	//private CotizacionDto ordenPedido;
+	private RodamientoDto rodamiento;
 	private float monto;
+	private int cantidad;
 	
 	public ItemOrdenCompraDto(CotizacionDto ordenPedido, float monto) {
 		super();
@@ -20,13 +21,13 @@ public class ItemOrdenCompraDto implements Serializable{
 		
 	}
 
-	/*public CotizacionDto getOrdenPedido() {
-		return ordenPedido;
+	public RodamientoDto getOrdenPedido() {
+		return rodamiento;
 	}
 
-	public void setOrdenPedido(CotizacionDto ordenPedido) {
-		this.ordenPedido = ordenPedido;
-	}*/
+	public void setOrdenPedido(RodamientoDto ordenPedido) {
+		this.rodamiento = ordenPedido;
+	}
 
 	public float getMonto() {
 		return monto;
@@ -34,6 +35,14 @@ public class ItemOrdenCompraDto implements Serializable{
 
 	public void setMonto(float monto) {
 		this.monto = monto;
+	}
+
+	public int getCantidad() {
+		return cantidad;
+	}
+
+	public void setCantidad(int cantidad) {
+		this.cantidad = cantidad;
 	}
 	
 	
