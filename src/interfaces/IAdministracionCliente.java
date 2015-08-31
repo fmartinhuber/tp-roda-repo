@@ -3,7 +3,6 @@ package interfaces;
 import java.rmi.*;
 import java.util.List;
 
-import bean.ClienteBean;
 import dto.*;
 
 public interface IAdministracionCliente extends Remote {
