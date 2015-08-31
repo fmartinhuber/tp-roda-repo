@@ -12,14 +12,12 @@ public class RodamientoDto implements Serializable{
 	private int stock;
 	private int medida;
 	private String nombre;
-	private String pais;
 	private String caracteristicas;
 	private int serie;
 	private String origen;
 	private String marca;
 	private float monto;
 	private ProveedorDto proveedor;
-	private String descripcion;
 	
 	
 	public RodamientoDto(String tipo, String codigo, int stock, int medida,
@@ -31,7 +29,6 @@ public class RodamientoDto implements Serializable{
 		this.stock = stock;
 		this.medida = medida;
 		this.nombre = nombre;
-		this.pais = pais;
 		this.caracteristicas = caracteristicas;
 		this.serie = serie;
 		this.origen = origen;
@@ -115,28 +112,12 @@ public class RodamientoDto implements Serializable{
 		this.nombre = nombre;
 	}
 	
-	public String getPais() {
-		return pais;
-	}
-	
-	public void setPais(String pais) {
-		this.pais = pais;
-	}
-	
 	public ProveedorDto getProveedor() {
 		return proveedor;
 	}
 	
 	public void setProveedor(ProveedorDto proveedor) {
 		this.proveedor = proveedor;
-	}
-
-	public String getDescripcion() {
-		return descripcion;
-	}
-
-	public void setDescripcion(String descripcion) {
-		this.descripcion = descripcion;
 	}
 
 	public String getMarca() {

@@ -2,18 +2,17 @@ package utils;
 
 import dto.*;
 
-public class Item {
+public class ItemDto {
 	private RodamientoDto rodamiento;
 	private int cantidad;
 	
 	
-	public Item(RodamientoDto rodamiento, int cantidad) {
-		super();
+	public ItemDto(RodamientoDto rodamiento, int cantidad) {
 		this.rodamiento = rodamiento;
 		this.cantidad = cantidad;
 	}
 	
-	public Item(){};
+	public ItemDto(){};
 
 
 	public RodamientoDto getRodamiento() {

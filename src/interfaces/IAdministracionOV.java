@@ -25,7 +25,7 @@ public interface IAdministracionOV extends Remote {
 	 * @return CotizacionDto
 	 * @throws RemoteException
 	 */
-	public CotizacionDto crearCotizacion(List <Item> listaItems, ClienteDto cliente) throws RemoteException;
+	public CotizacionDto crearCotizacion(List <ItemDto> listaItems, ClienteDto cliente) throws RemoteException;
 	
 	
 	

@@ -9,14 +9,14 @@ public class ClienteDto implements Serializable{
 	private static final long serialVersionUID = 1L;
 	private String razonSocial;
 	private String mail;
-	private int CUIT;
+	private String CUIT;
 	private int unidades;
 	private int meses;
 	private int operaciones;
 	
 	
 	
-	public ClienteDto(String razonSocial, String mail, int CUIT, int unidades,
+	public ClienteDto(String razonSocial, String mail, String CUIT, int unidades,
 			int meses, int operaciones) {
 		super();
 		this.razonSocial = razonSocial;
@@ -71,11 +71,11 @@ public class ClienteDto implements Serializable{
 		this.mail = mail;
 	}
 	
-	public int getCUIT() {
+	public String getCUIT() {
 		return CUIT;
 	}
 	
-	public void setCUIT(int CUIT) {
+	public void setCUIT(String CUIT) {
 		this.CUIT = CUIT;
 	}
 	
