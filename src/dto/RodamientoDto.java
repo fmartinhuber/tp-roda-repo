@@ -18,6 +18,7 @@ public class RodamientoDto implements Serializable{
 	private String origen;
 	private String marca;
 	private float monto;
+	private float costo;
 	private ProveedorDto proveedor;
 	private String descripcion;
 	
@@ -145,6 +146,14 @@ public class RodamientoDto implements Serializable{
 
 	public void setMarca(String marca) {
 		this.marca = marca;
+	}
+
+	public float getCosto() {
+		return costo;
+	}
+
+	public void setCosto(float costo) {
+		this.costo = costo;
 	}
 	
 	
