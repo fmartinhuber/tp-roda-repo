@@ -44,7 +44,11 @@ public interface IAdministracionCC extends Remote {
 	 */	
 	public List <RodamientoDto> obtenerListaComparativa () throws RemoteException;
 	
+	public List <RodamientoDto> obtenerListaComparativaOpcional () throws RemoteException;
+	
 	public void actualizarListaComparativa(List <RodamientoDto> listado) throws RemoteException;
+	
+	
 	
 	/**
 	 * Casa Central - Punto 4 - Compra de rodamientos
