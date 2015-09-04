@@ -10,33 +10,32 @@ public class RodamientoDto implements Serializable{
 	private String tipo;
 	private String codigo;
 	private int stock;
-	private int medida;
-	private String nombre;
-	private String caracteristicas;
 	private int serie;
 	private String origen;
 	private String marca;
+	private String descripcion;
 	private float monto;
 	private float costo;
 	private ProveedorDto proveedor;
 	
 	
-	public RodamientoDto(String tipo, String codigo, int stock, int medida,
-			String nombre, String pais, String caracteristicas, int serie,
-			String origen, float monto, ProveedorDto proveedor) {
+	
+	public RodamientoDto(String tipo, String codigo, int stock, int serie,
+			String origen, String marca, String descripcion, float monto,
+			float costo, ProveedorDto proveedor) {
 		super();
 		this.tipo = tipo;
 		this.codigo = codigo;
 		this.stock = stock;
-		this.medida = medida;
-		this.nombre = nombre;
-		this.caracteristicas = caracteristicas;
 		this.serie = serie;
 		this.origen = origen;
+		this.marca = marca;
+		this.setDescripcion(descripcion);
 		this.monto = monto;
+		this.costo = costo;
 		this.proveedor = proveedor;
 	}
-	
+
 	public RodamientoDto(){
 		
 	}
@@ -80,37 +79,13 @@ public class RodamientoDto implements Serializable{
 	public void setStock(int stock) {
 		this.stock = stock;
 	}
-	
-	public int getMedida() {
-		return medida;
-	}
-	
-	public void setMedida(int medida) {
-		this.medida = medida;
-	}
-	
-	public String getCaracteristicas() {
-		return caracteristicas;
-	}
-	
-	public void setCaracteristicas(String caracteristicas) {
-		this.caracteristicas = caracteristicas;
-	}
-	
+
 	public int getSerie() {
 		return serie;
 	}
 	
 	public void setSerie(int serie) {
 		this.serie = serie;
-	}
-	
-	public String getNombre() {
-		return nombre;
-	}
-	
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
 	}
 	
 	public ProveedorDto getProveedor() {
@@ -136,6 +111,13 @@ public class RodamientoDto implements Serializable{
 	public void setCosto(float costo) {
 		this.costo = costo;
 	}
-	
+
+	public String getDescripcion() {
+		return descripcion;
+	}
+
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
 	
 }
