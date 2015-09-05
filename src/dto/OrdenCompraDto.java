@@ -13,6 +13,7 @@ public class OrdenCompraDto implements Serializable{
 	private List <ItemOrdenCompraDto> items;
 	private ProveedorDto proveedor; 	
 	private List <CotizacionDto> listaCotizaciones;
+	private String estado;
 	
 	public OrdenCompraDto(String formaPago, float total,
 			float descuento, List<ItemOrdenCompraDto> items) {
@@ -73,6 +74,14 @@ public class OrdenCompraDto implements Serializable{
 
 	public void setListaCotizaciones(List <CotizacionDto> listaCotizaciones) {
 		this.listaCotizaciones = listaCotizaciones;
+	}
+
+	public String getEstado() {
+		return estado;
+	}
+
+	public void setEstado(String estado) {
+		this.estado = estado;
 	}
 	
 	
