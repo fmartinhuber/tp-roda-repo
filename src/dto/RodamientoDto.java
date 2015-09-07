@@ -10,29 +10,25 @@ public class RodamientoDto implements Serializable{
 	private String tipo;
 	private String codigo;
 	private int stock;
-	private int serie;
 	private String origen;
 	private String marca;
-	private String descripcion;
+	private String caracteristica;
 	private float monto;
-	private float costo;
 	private ProveedorDto proveedor;
 	
 	
 	
-	public RodamientoDto(String tipo, String codigo, int stock, int serie,
-			String origen, String marca, String descripcion, float monto,
-			float costo, ProveedorDto proveedor) {
+	public RodamientoDto(String tipo, String codigo, int stock, String origen,
+			String marca, String caracteristica, float monto,
+			ProveedorDto proveedor) {
 		super();
 		this.tipo = tipo;
 		this.codigo = codigo;
 		this.stock = stock;
-		this.serie = serie;
 		this.origen = origen;
 		this.marca = marca;
-		this.setDescripcion(descripcion);
+		this.caracteristica = caracteristica;
 		this.monto = monto;
-		this.costo = costo;
 		this.proveedor = proveedor;
 	}
 
@@ -80,14 +76,6 @@ public class RodamientoDto implements Serializable{
 		this.stock = stock;
 	}
 
-	public int getSerie() {
-		return serie;
-	}
-	
-	public void setSerie(int serie) {
-		this.serie = serie;
-	}
-	
 	public ProveedorDto getProveedor() {
 		return proveedor;
 	}
@@ -104,20 +92,12 @@ public class RodamientoDto implements Serializable{
 		this.marca = marca;
 	}
 
-	public float getCosto() {
-		return costo;
+	public String getCaracteristica() {
+		return caracteristica;
 	}
 
-	public void setCosto(float costo) {
-		this.costo = costo;
-	}
-
-	public String getDescripcion() {
-		return descripcion;
-	}
-
-	public void setDescripcion(String descripcion) {
-		this.descripcion = descripcion;
+	public void setCaracteristica(String caracteristica) {
+		this.caracteristica = caracteristica;
 	}
 	
 }

@@ -9,15 +9,17 @@ public class ItemCotizacionDto implements Serializable{
 	private static final long serialVersionUID = 1L;
 	private RodamientoDto rodamiento;
 	private int cant;
+	private float precio;
 	
 	
-	
-	public ItemCotizacionDto(RodamientoDto rodamiento, int cant) {
+		
+	public ItemCotizacionDto(RodamientoDto rodamiento, int cant, float precio) {
 		super();
 		this.rodamiento = rodamiento;
 		this.cant = cant;
+		this.setPrecio(precio);
 	}
-	
+
 	public ItemCotizacionDto(){
 		
 	}
@@ -37,6 +39,13 @@ public class ItemCotizacionDto implements Serializable{
 	public void setCant(int cant) {
 		this.cant = cant;
 	}
-	
 
+	public float getPrecio() {
+		return precio;
+	}
+
+	public void setPrecio(float precio) {
+		this.precio = precio;
+	}
+	
 }
