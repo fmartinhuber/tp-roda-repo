@@ -35,8 +35,9 @@ public interface IAdministracionOV extends Remote {
 	 * Los ítems pueden hacer referencia o no, a una o varias solicitudes de cotización anteriores, 
 	 * la cual pueden estar vigentes o no.
 	 * 
-	 * Coloquialmente: Generar una Orden de compra a CC con todas las cotizaciones aceptadas por el cliente
-	 * Si hay items no cotizados y/o vencidos deben generar una nueva cotización y remitirse al cliente
+	 * Coloquialmente: No tenemos estado de cotización por items, por lo que trataremos solo las cotizaciones en estado "aprobada"
+	 * El tratamiento sera el siguiente; se tomaran todas las cotizaiones en estado "aprobada" y se cambiara el estado a "solicitada"
+	 * estas cotiaciones seran tomas por la CC para generar las Ordenes de Compra al proveedor.
 	 * Genera la factura para un cliente con todas sus cotizaciones realizadas (no se envia al cliente, solo se genera)
 	 * 
 	 * Lo hace: Charly
