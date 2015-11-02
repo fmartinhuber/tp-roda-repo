@@ -32,8 +32,7 @@ public class RodamientoDto implements Serializable{
 		this.proveedor = proveedor;
 	}
 
-	public RodamientoDto(){
-		
+	public RodamientoDto() {
 	}
 
 	public float getMonto() {
