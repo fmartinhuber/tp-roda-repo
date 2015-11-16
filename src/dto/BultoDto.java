@@ -2,17 +2,19 @@ package dto;
 
 import java.util.*;
 
+import utils.ItemDto;
 
 
-public class EnvioAOVDto {
 
-	private List <RodamientoDto> rodamientos;
+public class BultoDto {
+
+	private List <ItemDto> rodamientos;
 	private ClienteDto cliente;
 	private RemitoDto remito;
 	
 	
 	
-	public EnvioAOVDto(List<RodamientoDto> rodamientos, ClienteDto cliente,
+	public BultoDto(List<ItemDto> rodamientos, ClienteDto cliente,
 			RemitoDto remito) {
 		super();
 		this.rodamientos = rodamientos;
@@ -20,15 +22,15 @@ public class EnvioAOVDto {
 		this.remito = remito;
 	}
 	
-	public EnvioAOVDto(){
+	public BultoDto(){
 		
 	}
 
-	public List<RodamientoDto> getRodamientos() {
+	public List<ItemDto> getRodamientos() {
 		return rodamientos;
 	}
 
-	public void setRodamientos(List<RodamientoDto> rodamientos) {
+	public void setRodamientos(List<ItemDto> rodamientos) {
 		this.rodamientos = rodamientos;
 	}
 

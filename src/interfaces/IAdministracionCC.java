@@ -3,6 +3,7 @@ package interfaces;
 import java.rmi.*;
 import java.util.*;
 
+import utils.ItemDto;
 import dto.*;
 
 
@@ -74,10 +75,10 @@ public interface IAdministracionCC extends Remote {
 	 * Formalmente: Consiste en la recepcion de la mercaderia solicitada a los proveedores, su control y la 
 	 * confeccion de los bultos para las OV. 
 	 * 
-	 * Coloquialmente: Recibe oredenes de compra parciales o completas y emite remitos a las OV.
+	 * Coloquialmente: Recibe ordenes de compra parciales o completas y emite remitos a las OV.
 	 * OJO: Genera varios XML molestos
 	 * 
-	 * Lo hace: Carlos
+	 * Lo hace: Rama
 	 * 
 	 * @param List <OrdenCompraDto>
 	 * @return RemitoDto
@@ -94,14 +95,14 @@ public interface IAdministracionCC extends Remote {
 	 * como en los otros ABM que se debe hacer con esos rodamientos (Cuando se compra se hace Alta, cuando se vende
 	 * se hace Baja). Tanto en Altas como Bajas el metodo debe actualizar los precios del stock con el 
 	 * precio promedio de mercado (de donde saco esto??)
-	 * OJO: Muchas restricciones que lo hacen complejo
-	 * 	 
+	 * OJO: Muchas restricciones que lo hacen complejo	 
+	 * 
 	 * Autor: Rama
 	 * 
 	 * @param List <RodamientoDto>
 	 * @return void
 	 * @throws RemoteException
 	 */
-	public void actualizarStock (List <RodamientoDto> listaRodamientos) throws RemoteException;
+	public void actualizarStock (List <ItemDto> listaRodamientos, String accion) throws RemoteException;
 	
 }

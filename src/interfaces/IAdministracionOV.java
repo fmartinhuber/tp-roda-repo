@@ -29,7 +29,7 @@ public interface IAdministracionOV extends Remote {
 	 * @return CotizacionDto
 	 * @throws RemoteException
 	 */
-	public CotizacionDto crearCotizacion (List <ItemDto> listaItems, ClienteDto cliente) throws RemoteException;
+	public void crearCotizacion (List <ItemDto> listaItems, ClienteDto cliente) throws RemoteException;
 	public float aprobarCotizacion (CotizacionDto miCotDto) throws RemoteException;
 	public void rechazarCotizacion (CotizacionDto miCotDto) throws RemoteException;
 	
@@ -52,7 +52,7 @@ public interface IAdministracionOV extends Remote {
 	 * @return FacturaDto
 	 * @throws RemoteException
 	 */
-	public void generarFactura (List<Integer> idsCoti, int idCliente) throws RemoteException;
+	public void generarFactura (List<CotizacionDto> idsCoti, ClienteDto idCliente) throws RemoteException;
 	
 	
 	
@@ -72,7 +72,7 @@ public interface IAdministracionOV extends Remote {
 	 * @return EnvioAOVDto
 	 * @throws RemoteException
 	 */
-	public EnvioAOVDto entregaPedidos (RemitoDto remito) throws RemoteException;
+	public BultoDto entregaPedidos (RemitoDto remito) throws RemoteException;
 	
 	
 	
@@ -105,6 +105,30 @@ public interface IAdministracionOV extends Remote {
 	 */
 	@Deprecated
 	public List<RodamientoDto> obtenerRodamientos() throws RemoteException;
+	
+	
+	public List <CotizacionDto> obtenerCotizacionesAprobadas () throws RemoteException;
+	
+	/**
+	 * Daro
+	 * 
+	 * Toma todas las cotizaciones aprobadas de la base y genera una solicitud de compra.
+	 * 
+	 * @throws RemoteException
+	 */
+	public void crearSolicitudCompra (List <CotizacionDto> cotizacionesAprobadas) throws RemoteException;
+	
+	
+	public List <SolicitudCompraDto> obtenerSolicitudesPendientes() throws RemoteException;
+	
+	/**
+	 * Daro
+	 * 
+	 * Toma todas las solicitudes de compra "pendientes" de la base y genera una solicitud de compra.
+	 * 
+	 * @throws RemoteException
+	 */
+	public void crearOrdenCompra(List <SolicitudCompraDto> solicitudesPendientes) throws RemoteException;
 	
 	
 }
