@@ -22,9 +22,9 @@ public interface IAdministracionCC extends Remote {
 	 * @return Boolean
 	 * @throws RemoteException
 	 */
-	public boolean altaProveedor (ProveedorDto proveedor) throws RemoteException;
-	public boolean bajaProveedor (ProveedorDto proveedor) throws RemoteException;
-	public boolean modificacionProveedor (ProveedorDto proveedor) throws RemoteException;
+	public void altaProveedor (ProveedorDto proveedor) throws RemoteException;
+	public void bajaProveedor (ProveedorDto proveedor) throws RemoteException;
+	public void modificacionProveedor (ProveedorDto proveedor) throws RemoteException;
 	
 	
 	
