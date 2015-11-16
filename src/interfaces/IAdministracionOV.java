@@ -17,7 +17,11 @@ public interface IAdministracionOV extends Remote {
 	 * 
 	 * Coloquialmente: Este metodo se encarga de devolverte la Cotizacion que le pediste, siendo 
 	 * cada "item" pedido un itemCotizacion. Levanta el XML que se genera cuando el cliente hace el
-	 * pedido por la pagina web y con eso genera la Cotizacion
+	 * pedido por la pagina web y con eso genera la Cotizacion.
+	 * 
+	 * crearCotizacion: Crea la cotizacion y la deja en estado "pendiente". Devuelve la Cotizacion
+	 * aprobarCotizacion: Actualiza el estado a "aprobada", devuelve float que es el precio de la Cotizacion
+	 * rechazarCotizacion: Actualiza el estado a "rechazada"
 	 * 
 	 * Lo hace: Daro 
 	 * 
@@ -25,7 +29,9 @@ public interface IAdministracionOV extends Remote {
 	 * @return CotizacionDto
 	 * @throws RemoteException
 	 */
-	public CotizacionDto crearCotizacion(List <ItemDto> listaItems, ClienteDto cliente) throws RemoteException;
+	public void crearCotizacion (ClienteDto cliente) throws RemoteException;
+	public float aprobarCotizacion (List <ItemDto> listaItems, CotizacionDto miCotDto) throws RemoteException;
+	public void rechazarCotizacion (CotizacionDto miCotDto) throws RemoteException;
 	
 	
 	
