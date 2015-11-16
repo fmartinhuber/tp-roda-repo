@@ -52,7 +52,7 @@ public interface IAdministracionOV extends Remote {
 	 * @return FacturaDto
 	 * @throws RemoteException
 	 */
-	public FacturaDto crearFactura (ClienteDto cliente, CotizacionDto cotizacion) throws RemoteException;
+	public void generarFactura (List<Integer> idsCoti, int idCliente) throws RemoteException;
 	
 	
 	
@@ -93,7 +93,9 @@ public interface IAdministracionOV extends Remote {
 	 * @return Boolean
 	 * @throws RemoteException
 	 */
-	public boolean abmCliente (ClienteDto cliente, String accion) throws RemoteException;
+	public boolean altaCliente (ClienteDto cliente) throws RemoteException;
+	public boolean bajaCliente (ClienteDto cliente) throws RemoteException;
+	public boolean modificacionCliente (ClienteDto cliente) throws RemoteException;
 	
 	
 	/**
@@ -103,4 +105,6 @@ public interface IAdministracionOV extends Remote {
 	 */
 	@Deprecated
 	public List<RodamientoDto> obtenerRodamientos() throws RemoteException;
+	
+	
 }

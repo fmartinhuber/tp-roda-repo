@@ -22,7 +22,9 @@ public interface IAdministracionCC extends Remote {
 	 * @return Boolean
 	 * @throws RemoteException
 	 */
-	public boolean abmProveedor (ProveedorDto proveedor, String accion) throws RemoteException;
+	public boolean altaProveedor (ProveedorDto proveedor) throws RemoteException;
+	public boolean bajaProveedor (ProveedorDto proveedor) throws RemoteException;
+	public boolean modificacionProveedor (ProveedorDto proveedor) throws RemoteException;
 	
 	
 	
