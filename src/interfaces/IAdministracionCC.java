@@ -66,7 +66,7 @@ public interface IAdministracionCC extends Remote {
 	 * @return List<OrdenCompraDto>
 	 * @throws RemoteException
 	 */
-	public List<OrdenCompraDto> crearOrden (List <CotizacionDto> listaCotizaciones) throws RemoteException;
+	public List<OrdenCompraDto> crearOrden (List <SolicitudCompraDto> listaCotizaciones) throws RemoteException;
 	
 	
 	
