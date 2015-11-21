@@ -9,12 +9,12 @@ import java.io.Serializable;
 public class ItemFacturaDto implements Serializable{
 
 	private static final long serialVersionUID = 1L;
+	
 	private RodamientoDto rodamiento;  
 	private float subtotal;
 	private int cantidad; 
 	
 	public ItemFacturaDto(RodamientoDto rodamiento, float subtotal) {
-		super();
 		this.rodamiento = rodamiento;
 		this.subtotal = subtotal;
 	}

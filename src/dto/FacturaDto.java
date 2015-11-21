@@ -8,6 +8,8 @@ import java.util.*;
 public class FacturaDto implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
+	
+	private int numeroFactura;
 	private String estado;
 	private Date fecha;
 	private ClienteDto cliente;
@@ -16,11 +18,11 @@ public class FacturaDto implements Serializable{
 	private float total;
 	
 	
-	
-	public FacturaDto(String estado, Date fecha,
+
+	public FacturaDto(int numeroFactura, String estado, Date fecha,
 			ClienteDto cliente, float descuento, List<ItemFacturaDto> items,
 			float total) {
-		super();
+		this.numeroFactura = numeroFactura;
 		this.estado = estado;
 		this.fecha = fecha;
 		this.cliente = cliente;
@@ -28,8 +30,10 @@ public class FacturaDto implements Serializable{
 		this.items = items;
 		this.total = total;
 	}
+
 	
-	public FacturaDto(){
+	
+	public FacturaDto() {
 		
 	}
 
@@ -80,6 +84,13 @@ public class FacturaDto implements Serializable{
 	public void setDescuento(float descuento) {
 		this.descuento = descuento;
 	}
-	
+
+	public int getNumeroFactura() {
+		return numeroFactura;
+	}
+
+	public void setNumeroFactura(int numeroFactura) {
+		this.numeroFactura = numeroFactura;
+	}
 	
 }

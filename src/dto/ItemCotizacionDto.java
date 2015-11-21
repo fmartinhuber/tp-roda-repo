@@ -7,6 +7,8 @@ import java.io.Serializable;
 public class ItemCotizacionDto implements Serializable{
 
 	private static final long serialVersionUID = 1L;
+	
+	
 	private RodamientoDto rodamiento;
 	private int cant;
 	private float precio;
@@ -14,7 +16,6 @@ public class ItemCotizacionDto implements Serializable{
 	
 		
 	public ItemCotizacionDto(RodamientoDto rodamiento, int cant, float precio) {
-		super();
 		this.rodamiento = rodamiento;
 		this.cant = cant;
 		this.setPrecio(precio);

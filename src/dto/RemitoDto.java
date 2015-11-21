@@ -8,19 +8,22 @@ import java.util.*;
 public class RemitoDto implements Serializable{
 
 	private static final long serialVersionUID = 1L;
+	
+	private int numeroRemito;
 	private String estado;
 	private ClienteDto cliente;
-	private List <CotizacionDto> cotizaciones;
+	private List<CotizacionDto> cotizaciones;
 	private String comentarios;
 	private Date fecha;
 	private boolean conformidad;
 	
 	
 	
-	public RemitoDto(String estado, ClienteDto cliente,
+	public RemitoDto(int numeroRemito, String estado, ClienteDto cliente,
 			List<CotizacionDto> cotizaciones, String comentarios, Date fecha,
 			boolean conformidad) {
 		super();
+		this.numeroRemito = numeroRemito;
 		this.estado = estado;
 		this.cliente = cliente;
 		this.cotizaciones = cotizaciones;
@@ -28,7 +31,7 @@ public class RemitoDto implements Serializable{
 		this.fecha = fecha;
 		this.conformidad = conformidad;
 	}
-	
+
 	public RemitoDto(){
 		
 	}
@@ -80,6 +83,13 @@ public class RemitoDto implements Serializable{
 	public void setConformidad(boolean conformidad) {
 		this.conformidad = conformidad;
 	}
-	
 
+	public int getNumeroRemito() {
+		return numeroRemito;
+	}
+
+	public void setNumeroRemito(int numeroRemito) {
+		this.numeroRemito = numeroRemito;
+	}
+	
 }

@@ -14,6 +14,8 @@ import java.util.*;
 public class CotizacionDto implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
+	
+	private int numeroCotizacion;
 	private List<ItemCotizacionDto> items;
 	private String estado;
 	private ClienteDto cliente;
@@ -21,10 +23,10 @@ public class CotizacionDto implements Serializable{
 	private Date fechaVigencia;
 	
 	
-	
-	public CotizacionDto(List<ItemCotizacionDto> items, String estado,
-			ClienteDto cliente, Date fechaCreacion, Date fechaVigencia) {
-		super();
+	public CotizacionDto(int numeroCotizacion, List<ItemCotizacionDto> items,
+			String estado, ClienteDto cliente, Date fechaCreacion,
+			Date fechaVigencia) {
+		this.numeroCotizacion = numeroCotizacion;
 		this.items = items;
 		this.estado = estado;
 		this.cliente = cliente;
@@ -32,9 +34,11 @@ public class CotizacionDto implements Serializable{
 		this.fechaVigencia = fechaVigencia;
 	}
 
-	public CotizacionDto(){
-		
+	public CotizacionDto() {
+
 	}
+
+
 
 	public List<ItemCotizacionDto> getItems() {
 		return items;
@@ -74,6 +78,14 @@ public class CotizacionDto implements Serializable{
 
 	public void setFechaVigencia(Date fechaVigencia) {
 		this.fechaVigencia = fechaVigencia;
+	}
+
+	public int getNumeroCotizacion() {
+		return numeroCotizacion;
+	}
+
+	public void setNumeroCotizacion(int numeroCotizacion) {
+		this.numeroCotizacion = numeroCotizacion;
 	}
 	
 }

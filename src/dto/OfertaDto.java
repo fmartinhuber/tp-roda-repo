@@ -6,11 +6,12 @@ import java.io.Serializable;
 public class OfertaDto extends RodamientoDto implements Serializable{
 
 	private static final long serialVersionUID = 1L;
+	
 	private float descuento;
 	private int volumen;
 	private int stock;
 	
-		
+	
 	
 	public OfertaDto(float descuento, int volumen, int stock) {
 		super();

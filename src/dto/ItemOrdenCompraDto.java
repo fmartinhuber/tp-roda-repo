@@ -11,22 +11,23 @@ public class ItemOrdenCompraDto implements Serializable{
 	private float monto;
 	private int cantidad;
 	
-	public ItemOrdenCompraDto(CotizacionDto ordenPedido, float monto) {
-		super();
-		//this.ordenPedido = ordenPedido;
+	public ItemOrdenCompraDto(RodamientoDto rodamiento, float monto,
+			int cantidad) {
+		this.rodamiento = rodamiento;
 		this.monto = monto;
+		this.cantidad = cantidad;
 	}
 	
-	public ItemOrdenCompraDto(){
-		
+	public ItemOrdenCompraDto() {
+
 	}
 
-	public RodamientoDto getOrdenPedido() {
+	public RodamientoDto getRodamiento() {
 		return rodamiento;
 	}
 
-	public void setOrdenPedido(RodamientoDto ordenPedido) {
-		this.rodamiento = ordenPedido;
+	public void setRodamiento(RodamientoDto rodamiento) {
+		this.rodamiento = rodamiento;
 	}
 
 	public float getMonto() {
@@ -44,6 +45,5 @@ public class ItemOrdenCompraDto implements Serializable{
 	public void setCantidad(int cantidad) {
 		this.cantidad = cantidad;
 	}
-	
 	
 }
