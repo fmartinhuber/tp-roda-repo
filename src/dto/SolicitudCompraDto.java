@@ -1,9 +1,12 @@
 package dto;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class SolicitudCompraDto {
-
+public class SolicitudCompraDto implements Serializable {
+	
+	private static final long serialVersionUID = 1L;
+	
 	private int numeroSolicitudCompra;
 	private String estado;
 	private List <CotizacionDto> listaCotizaciones;

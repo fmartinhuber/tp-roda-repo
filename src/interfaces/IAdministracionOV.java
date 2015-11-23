@@ -93,9 +93,9 @@ public interface IAdministracionOV extends Remote {
 	 * @return Boolean
 	 * @throws RemoteException
 	 */
-	public void altaCliente (ClienteDto cliente) throws RemoteException;
-	public void bajaCliente (ClienteDto cliente) throws RemoteException;
-	public void modificacionCliente (ClienteDto cliente) throws RemoteException;
+	public void crearCliente (ClienteDto cliente) throws RemoteException;
+	public void eliminarCliente (ClienteDto cliente) throws RemoteException;
+	public void modificarCliente (ClienteDto cliente) throws RemoteException;
 	
 	
 	/**
