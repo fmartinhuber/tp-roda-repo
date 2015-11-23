@@ -14,7 +14,7 @@ public class ItemCotizacionDto implements Serializable{
 	private float precio;
 	
 	
-		
+	
 	public ItemCotizacionDto(RodamientoDto rodamiento, int cant, float precio) {
 		this.rodamiento = rodamiento;
 		this.cant = cant;
