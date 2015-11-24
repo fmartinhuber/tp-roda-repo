@@ -19,19 +19,20 @@ public interface IAdministracionOV extends Remote {
 	 * cada "item" pedido un itemCotizacion. Levanta el XML que se genera cuando el cliente hace el
 	 * pedido por la pagina web y con eso genera la Cotizacion.
 	 * 
-	 * crearCotizacion: Crea la cotizacion y la deja en estado "pendiente". Devuelve la Cotizacion
-	 * aprobarCotizacion: Actualiza el estado a "aprobada", devuelve float que es el precio de la Cotizacion
-	 * rechazarCotizacion: Actualiza el estado a "rechazada"
-	 * 
 	 * Lo hace: Daro 
 	 * 
 	 * @param List <Item> (Utilidad, rodamiento con su cantidad), ClienteDto
 	 * @return CotizacionDto
 	 * @throws RemoteException
 	 */
-	public void crearCotizacion (List <ItemDto> listaItems, ClienteDto cliente) throws RemoteException;
-	public float aprobarYCotizarCotizacion (CotizacionDto miCotDto) throws RemoteException;
-	public void rechazarCotizacion (CotizacionDto miCotDto) throws RemoteException;
+	//Crea la cotizacion y la deja en estado "pendiente". Devuelve el id de la cotizacion creada
+	public int crearCotizacion (List <ItemDto> listaItems, ClienteDto cliente) throws RemoteException;
+	
+	//Actualiza el estado a "aprobada", devuelve float que es el precio de la Cotizacion
+	public float aprobarYCotizarCotizacion (int idCotizacion) throws RemoteException;
+	
+	//Actualiza el estado a "rechazada"
+	public void rechazarCotizacion (int idCotizacion) throws RemoteException;
 	
 	
 	
@@ -72,7 +73,7 @@ public interface IAdministracionOV extends Remote {
 	 * @return EnvioAOVDto
 	 * @throws RemoteException
 	 */
-	public BultoDto entregaPedidos (RemitoDto remito) throws RemoteException;
+	public BultoDto entregaPedidos (RemitoDto remito, FacturaDto factura) throws RemoteException;
 	
 	
 	

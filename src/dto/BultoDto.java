@@ -13,20 +13,18 @@ public class BultoDto  implements Serializable{
 	
 	private int numeroBulto;
 	private List <ItemDto> rodamientos;
-	private ClienteDto cliente;
 	private RemitoDto remito;
+	private FacturaDto factura;
 	
-	public BultoDto() {
-		
-	}
-
-	public BultoDto(int numeroBulto, List<ItemDto> rodamientos,
-			ClienteDto cliente, RemitoDto remito) {
-		super();
+	public BultoDto(int numeroBulto, List<ItemDto> rodamientos, RemitoDto remito, FacturaDto factura) {
 		this.numeroBulto = numeroBulto;
 		this.rodamientos = rodamientos;
-		this.cliente = cliente;
 		this.remito = remito;
+		this.factura = factura;
+	}
+	
+	public BultoDto() {
+
 	}
 
 	public int getNumeroBulto() {
@@ -45,14 +43,6 @@ public class BultoDto  implements Serializable{
 		this.rodamientos = rodamientos;
 	}
 
-	public ClienteDto getCliente() {
-		return cliente;
-	}
-
-	public void setCliente(ClienteDto cliente) {
-		this.cliente = cliente;
-	}
-
 	public RemitoDto getRemito() {
 		return remito;
 	}
@@ -61,4 +51,12 @@ public class BultoDto  implements Serializable{
 		this.remito = remito;
 	}
 
+	public FacturaDto getFactura() {
+		return factura;
+	}
+
+	public void setFactura(FacturaDto factura) {
+		this.factura = factura;
+	}
+	
 }
