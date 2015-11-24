@@ -96,17 +96,7 @@ public interface IAdministracionOV extends Remote {
 	public void crearCliente (ClienteDto cliente) throws RemoteException;
 	public void eliminarCliente (ClienteDto cliente) throws RemoteException;
 	public void modificarCliente (ClienteDto cliente) throws RemoteException;
-	
-	
-	/**
-	 * Esto quedo, ver para que se usa
-	 * @return List<RodamientoDto>
-	 * @throws RemoteException
-	 */
-	@Deprecated
-	public List<RodamientoDto> obtenerRodamientos() throws RemoteException;
-	
-	
+		
 	public List <CotizacionDto> obtenerCotizacionesAprobadas () throws RemoteException;
 	
 	/**
