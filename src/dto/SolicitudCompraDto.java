@@ -16,6 +16,8 @@ public class SolicitudCompraDto implements Serializable {
 		this.estado = estado;
 		this.listaCotizaciones = listaCotizaciones;
 	}
+	
+	public SolicitudCompraDto(){};
 
 	public int getNumeroSolicitudCompra() {
 		return numeroSolicitudCompra;
