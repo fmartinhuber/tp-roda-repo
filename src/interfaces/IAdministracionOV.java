@@ -73,7 +73,7 @@ public interface IAdministracionOV extends Remote {
 	 * @return EnvioAOVDto
 	 * @throws RemoteException
 	 */
-	public BultoDto entregaPedidos (RemitoDto remito, FacturaDto factura) throws RemoteException;
+	public BultoDto entregaPedidos (int idRemito, int idFactura) throws RemoteException;
 	
 	
 	

@@ -76,7 +76,7 @@ public class RemitoDto implements Serializable{
 		this.fecha = fecha;
 	}
 
-	public boolean isConformidad() {
+	public boolean getConformidad() {
 		return conformidad;
 	}
 
@@ -91,5 +91,6 @@ public class RemitoDto implements Serializable{
 	public void setNumeroRemito(int numeroRemito) {
 		this.numeroRemito = numeroRemito;
 	}
+	
 	
 }

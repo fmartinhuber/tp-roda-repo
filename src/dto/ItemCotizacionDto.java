@@ -37,7 +37,7 @@ public class ItemCotizacionDto implements Serializable{
 		return cant;
 	}
 	
-	public void setCant(int cant) {
+	public void setCant(int cantidad) {
 		this.cant = cant;
 	}
 
@@ -48,5 +48,6 @@ public class ItemCotizacionDto implements Serializable{
 	public void setPrecio(float precio) {
 		this.precio = precio;
 	}
+	
 	
 }
