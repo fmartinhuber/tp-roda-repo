@@ -9,6 +9,8 @@ public class SolicitudCompraDto implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = -9220419541089870654L;
+	
+	
 	private int numeroSolicitudCompra;
 	private String estado;
 	private List <CotizacionDto> listaCotizaciones;
