@@ -10,30 +10,31 @@ public class ItemFacturaDto implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 	
-	private RodamientoDto rodamiento;  
-	private float subtotal;
-	private int cantidad; 
+	private RodamientoDto rodamiento;
+	private float precio;
+	private int cantidad;
 	
-	public ItemFacturaDto(RodamientoDto rodamiento, float subtotal) {
+	
+	public ItemFacturaDto(RodamientoDto rodamiento, float precio) {
 		this.rodamiento = rodamiento;
-		this.subtotal = subtotal;
+		this.precio = precio;
 	}
 	
 	public ItemFacturaDto(){
 		
 	}
 	
-	public RodamientoDto getOrden() {
+	public RodamientoDto getRodamiento() {
 		return rodamiento;
 	}
-	public void setOrden(RodamientoDto rodamiento) {
+	public void setRodamiento(RodamientoDto rodamiento) {
 		this.rodamiento = rodamiento;
 	}
-	public float getSubtotal() {
-		return subtotal;
+	public float getPrecio() {
+		return precio;
 	}
-	public void setSubtotal(float subtotal) {
-		this.subtotal = subtotal;
+	public void setPrecio(float precio) {
+		this.precio = precio;
 	}
 
 	public int getCantidad() {

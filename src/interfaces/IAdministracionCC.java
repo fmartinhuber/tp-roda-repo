@@ -23,9 +23,9 @@ public interface IAdministracionCC extends Remote {
 	 * @return Boolean
 	 * @throws RemoteException
 	 */
-	public void altaProveedor (ProveedorDto proveedor) throws RemoteException;
-	public void bajaProveedor (ProveedorDto proveedor) throws RemoteException;
-	public void modificacionProveedor (ProveedorDto proveedor) throws RemoteException;
+	public void crearProveedor (ProveedorDto proveedor) throws RemoteException;
+	public void eliminarProveedor (ProveedorDto proveedor) throws RemoteException;
+	public void modificarProveedor (ProveedorDto proveedor) throws RemoteException;
 	
 	
 	
@@ -55,7 +55,7 @@ public interface IAdministracionCC extends Remote {
 	
 	/**
 	 * Casa Central - Punto 4 - Compra de rodamientos
-	 * Formalmente: Consiste en la compra al o los proveedor(es) de los ítems indicados en las solicitudes 
+	 * Formalmente: Consiste en la compra a los proveedor(es) de los ítems indicados en las solicitudes 
 	 * de compra enviada por las OV.
 	 * 
 	 * Coloquialmente: Recibe solicitudes de cotizaciones CONFIRMADAS y genera ORDENES DE COMPRA a los proveedores.  
@@ -66,7 +66,7 @@ public interface IAdministracionCC extends Remote {
 	 * @return List<OrdenCompraDto>
 	 * @throws RemoteException
 	 */
-	public List<OrdenCompraDto> crearOrden (List <SolicitudCompraDto> listaCotizaciones) throws RemoteException;
+	public void crearOrdenCompra (List <SolicitudCompraDto> listaCotizaciones, String formaDePago) throws RemoteException;
 	
 	
 	

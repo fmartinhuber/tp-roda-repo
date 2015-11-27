@@ -1,9 +1,14 @@
 package dto;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class SolicitudCompraDto {
+public class SolicitudCompraDto implements Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -9220419541089870654L;
 	private int numeroSolicitudCompra;
 	private String estado;
 	private List <CotizacionDto> listaCotizaciones;
@@ -13,6 +18,8 @@ public class SolicitudCompraDto {
 		this.estado = estado;
 		this.listaCotizaciones = listaCotizaciones;
 	}
+	
+	public SolicitudCompraDto(){};
 
 	public int getNumeroSolicitudCompra() {
 		return numeroSolicitudCompra;
