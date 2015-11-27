@@ -29,7 +29,7 @@ public interface IAdministracionOV extends Remote {
 	public int crearCotizacion (List <ItemDto> listaItems, ClienteDto cliente) throws RemoteException;
 	
 	//Actualiza el estado a "aprobada", devuelve float que es el precio de la Cotizacion
-	public float aprobarYCotizarCotizacion (int idCotizacion) throws RemoteException;
+	public float aprobarYCotizarCotizacion (int miCotDto) throws RemoteException;
 	
 	//Actualiza el estado a "rechazada"
 	public void rechazarCotizacion (int idCotizacion) throws RemoteException;
