@@ -3,26 +3,25 @@ package dto;
 import java.io.Serializable;
 import java.util.*;
 
-import utils.ItemDto;
 
 
-
-public class BultoDto  implements Serializable{
+public class BultoDto implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 	
 	private int numeroBulto;
-	private List <ItemDto> itemRodamiento;
+	private List <ItemBultoDto> itemBulto;
 	private RemitoDto remito;
 	private FacturaDto factura;
 	
-	public BultoDto(int numeroBulto, List<ItemDto> itemRodamiento, RemitoDto remito, FacturaDto factura) {
+	public BultoDto(int numeroBulto, List<ItemBultoDto> itemBulto,
+			RemitoDto remito, FacturaDto factura) {
 		this.numeroBulto = numeroBulto;
-		this.itemRodamiento = itemRodamiento;
+		this.itemBulto = itemBulto;
 		this.remito = remito;
 		this.factura = factura;
 	}
-	
+
 	public BultoDto() {
 		
 	}
@@ -35,12 +34,12 @@ public class BultoDto  implements Serializable{
 		this.numeroBulto = numeroBulto;
 	}
 
-	public List<ItemDto> getItemRodamiento() {
-		return itemRodamiento;
+	public List<ItemBultoDto> getItemBulto() {
+		return itemBulto;
 	}
 
-	public void setItemRodamiento(List<ItemDto> itemRodamiento) {
-		this.itemRodamiento = itemRodamiento;
+	public void setItemBulto(List<ItemBultoDto> itemBulto) {
+		this.itemBulto = itemBulto;
 	}
 
 	public RemitoDto getRemito() {
