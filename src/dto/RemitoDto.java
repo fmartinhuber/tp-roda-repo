@@ -11,29 +11,32 @@ public class RemitoDto implements Serializable{
 	
 	private int numeroRemito;
 	private String estado;
-	private ClienteDto cliente;
-	private List<CotizacionDto> cotizaciones;
-	private String comentarios;
+	private List <OrdenCompraDto> ordenesDeCompra;
 	private Date fecha;
-	private boolean conformidad;
+	private String comentarios;
 	
 	
 	
-	public RemitoDto(int numeroRemito, String estado, ClienteDto cliente,
-			List<CotizacionDto> cotizaciones, String comentarios, Date fecha,
-			boolean conformidad) {
+	public RemitoDto(int numeroRemito, String estado,
+			List<OrdenCompraDto> ordenesDeCompra, Date fecha, String comentarios) {
 		super();
 		this.numeroRemito = numeroRemito;
 		this.estado = estado;
-		this.cliente = cliente;
-		this.cotizaciones = cotizaciones;
-		this.comentarios = comentarios;
+		this.ordenesDeCompra = ordenesDeCompra;
 		this.fecha = fecha;
-		this.conformidad = conformidad;
+		this.comentarios = comentarios;
 	}
 
 	public RemitoDto(){
 		
+	}
+
+	public int getNumeroRemito() {
+		return numeroRemito;
+	}
+
+	public void setNumeroRemito(int numeroRemito) {
+		this.numeroRemito = numeroRemito;
 	}
 
 	public String getEstado() {
@@ -44,28 +47,12 @@ public class RemitoDto implements Serializable{
 		this.estado = estado;
 	}
 
-	public ClienteDto getCliente() {
-		return cliente;
+	public List<OrdenCompraDto> getOrdenesDeCompra() {
+		return ordenesDeCompra;
 	}
 
-	public void setCliente(ClienteDto cliente) {
-		this.cliente = cliente;
-	}
-
-	public List<CotizacionDto> getCotizaciones() {
-		return cotizaciones;
-	}
-
-	public void setCotizaciones(List<CotizacionDto> cotizaciones) {
-		this.cotizaciones = cotizaciones;
-	}
-
-	public String getComentarios() {
-		return comentarios;
-	}
-
-	public void setComentarios(String comentarios) {
-		this.comentarios = comentarios;
+	public void setOrdenesDeCompra(List<OrdenCompraDto> ordenesDeCompra) {
+		this.ordenesDeCompra = ordenesDeCompra;
 	}
 
 	public Date getFecha() {
@@ -76,21 +63,12 @@ public class RemitoDto implements Serializable{
 		this.fecha = fecha;
 	}
 
-	public boolean getConformidad() {
-		return conformidad;
+	public String getComentarios() {
+		return comentarios;
 	}
 
-	public void setConformidad(boolean conformidad) {
-		this.conformidad = conformidad;
+	public void setComentarios(String comentarios) {
+		this.comentarios = comentarios;
 	}
 
-	public int getNumeroRemito() {
-		return numeroRemito;
-	}
-
-	public void setNumeroRemito(int numeroRemito) {
-		this.numeroRemito = numeroRemito;
-	}
-	
-	
 }
