@@ -9,14 +9,15 @@ public class ProveedorDto implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 	
+	private int nroProveedor;
 	private String nombre;
 	private String CUIT;
 	private List<RodamientoDto> Rodamientos;
 	
-		
 	
-	public ProveedorDto(String nombre, String CUIT, List<RodamientoDto> rodamientos) {
+	public ProveedorDto(int nroProv, String nombre, String CUIT, List<RodamientoDto> rodamientos) {
 		super();
+		this.nroProveedor = nroProv;
 		this.nombre = nombre;
 		this.CUIT = CUIT;
 		Rodamientos = rodamientos;
@@ -57,5 +58,13 @@ public class ProveedorDto implements Serializable{
 	public void setRodamientos(List<RodamientoDto> rodamientos) {
 		Rodamientos = rodamientos;
 	}
-	
+		
+	public int getNroProveedor() {
+		return nroProveedor;
+	}
+
+	public void setNroProveedor(int nroProveedor) {
+		this.nroProveedor = nroProveedor;
+	}
+
 }
