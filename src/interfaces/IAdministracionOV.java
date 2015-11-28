@@ -26,10 +26,10 @@ public interface IAdministracionOV extends Remote {
 	 * @throws RemoteException
 	 */
 	//Crea la cotizacion y la deja en estado "pendiente". Devuelve el id de la cotizacion creada
-	public int crearCotizacion (List <ItemDto> listaItems, ClienteDto cliente) throws RemoteException;
+	public int crearCotizacion (List <ItemDto> listaItems, ClienteDto clienteDto) throws RemoteException;
 	
 	//Actualiza el estado a "aprobada", devuelve float que es el precio de la Cotizacion
-	public float aprobarYCotizarCotizacion (int miCotDto) throws RemoteException;
+	public void aprobarYCotizarCotizacion (int miCotDto) throws RemoteException;
 	
 	//Actualiza el estado a "rechazada"
 	public void rechazarCotizacion (int idCotizacion) throws RemoteException;
