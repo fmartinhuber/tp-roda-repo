@@ -14,22 +14,23 @@ public class RemitoDto implements Serializable{
 	private List <OrdenCompraDto> ordenesDeCompra;
 	private Date fecha;
 	private String comentarios;
+	private ProveedorDto proveedor;
 	
-	
-	
+	public RemitoDto(){};
+
 	public RemitoDto(int numeroRemito, String estado,
-			List<OrdenCompraDto> ordenesDeCompra, Date fecha, String comentarios) {
+			List<OrdenCompraDto> ordenesDeCompra, Date fecha,
+			String comentarios, ProveedorDto proveedor) {
 		super();
 		this.numeroRemito = numeroRemito;
 		this.estado = estado;
 		this.ordenesDeCompra = ordenesDeCompra;
 		this.fecha = fecha;
 		this.comentarios = comentarios;
+		this.proveedor = proveedor;
 	}
 
-	public RemitoDto(){
-		
-	}
+
 
 	public int getNumeroRemito() {
 		return numeroRemito;
@@ -71,4 +72,12 @@ public class RemitoDto implements Serializable{
 		this.comentarios = comentarios;
 	}
 
+	public ProveedorDto getProveedor() {
+		return proveedor;
+	}
+	
+	public void setProveedor(ProveedorDto proveedor) {
+		this.proveedor = proveedor;
+	}
+	
 }
