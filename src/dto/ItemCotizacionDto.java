@@ -8,7 +8,15 @@ public class ItemCotizacionDto implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 	
-	
+	private int nroRegistro;
+	public int getNroRegistro() {
+		return nroRegistro;
+	}
+
+	public void setNroRegistro(int nroRegistro) {
+		this.nroRegistro = nroRegistro;
+	}
+
 	private RodamientoDto rodamiento;
 	private int cant;
 	private float precio;
