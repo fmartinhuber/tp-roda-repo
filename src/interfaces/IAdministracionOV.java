@@ -120,7 +120,7 @@ public interface IAdministracionOV extends Remote {
 	 * 
 	 * @throws RemoteException
 	 */
-	public void crearOrdenCompra(List <SolicitudCompraDto> solicitudesPendientes) throws RemoteException;
+	public int crearOrdenCompra(List <SolicitudCompraDto> solicitudesPendientes) throws RemoteException;
 	
 	
 }
