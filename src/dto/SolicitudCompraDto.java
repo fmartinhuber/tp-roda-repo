@@ -5,10 +5,7 @@ import java.util.List;
 
 public class SolicitudCompraDto implements Serializable {
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = -9220419541089870654L;
+	private static final long serialVersionUID = 1L;
 	
 	
 	private int numeroSolicitudCompra;
