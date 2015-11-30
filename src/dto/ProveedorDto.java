@@ -12,19 +12,26 @@ public class ProveedorDto implements Serializable{
 	private int nroProveedor;
 	private String nombre;
 	private String CUIT;
-	private List<RodamientoDto> Rodamientos;
+	//private List<RodamientoDto> Rodamientos;
 	
 	
-	public ProveedorDto(int nroProv, String nombre, String CUIT, List<RodamientoDto> rodamientos) {
-		super();
-		this.nroProveedor = nroProv;
-		this.nombre = nombre;
-		this.CUIT = CUIT;
-		Rodamientos = rodamientos;
-	}
+//	public ProveedorDto(int nroProv, String nombre, String CUIT, List<RodamientoDto> rodamientos) {
+//		super();
+//		this.nroProveedor = nroProv;
+//		this.nombre = nombre;
+//		this.CUIT = CUIT;
+//		Rodamientos = rodamientos;
+//	}
 
 	public ProveedorDto(){
 		
+	}
+
+	public ProveedorDto(int nroProveedor, String nombre, String cUIT) {
+		super();
+		this.nroProveedor = nroProveedor;
+		this.nombre = nombre;
+		CUIT = cUIT;
 	}
 
 	public String getNombre() {
@@ -33,14 +40,6 @@ public class ProveedorDto implements Serializable{
 	
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
-	}
-	
-	public List<RodamientoDto> getRegulares() {
-		return Rodamientos;
-	}
-	
-	public void setRegulares(List<RodamientoDto> regulares) {
-		Rodamientos = regulares;
 	}
 
 	public String getCUIT() {
@@ -51,13 +50,13 @@ public class ProveedorDto implements Serializable{
 		this.CUIT = CUIT;
 	}
 
-	public List<RodamientoDto> getRodamientos() {
-		return Rodamientos;
-	}
-
-	public void setRodamientos(List<RodamientoDto> rodamientos) {
-		Rodamientos = rodamientos;
-	}
+//	public List<RodamientoDto> getRodamientos() {
+//		return Rodamientos;
+//	}
+//
+//	public void setRodamientos(List<RodamientoDto> rodamientos) {
+//		Rodamientos = rodamientos;
+//	}
 		
 	public int getNroProveedor() {
 		return nroProveedor;

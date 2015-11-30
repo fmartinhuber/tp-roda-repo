@@ -46,7 +46,7 @@ public class ItemCotizacionDto implements Serializable{
 	}
 	
 	public void setCant(int cantidad) {
-		this.cant = cant;
+		this.cant = cantidad;
 	}
 
 	public float getPrecio() {
