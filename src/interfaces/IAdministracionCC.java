@@ -68,6 +68,8 @@ public interface IAdministracionCC extends Remote {
 	 */
 	public int crearOrdenCompra (List <SolicitudCompraDto> listaCotizaciones, String formaDePago) throws RemoteException;
 	
+	public int crearOrdenCompraXid (List<String> idsCotis, String formaDePago) throws RemoteException;
+	
 	
 	
 	/**
