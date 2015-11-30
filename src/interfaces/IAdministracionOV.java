@@ -109,6 +109,7 @@ public interface IAdministracionOV extends Remote {
 	 */
 	public void crearSolicitudCompra (List <CotizacionDto> cotizacionesAprobadas) throws RemoteException;
 	
+	public List <CotizacionDto> obtenerCotizaciones() throws RemoteException;
 	
 	public List <SolicitudCompraDto> obtenerSolicitudesPendientes() throws RemoteException;
 	
