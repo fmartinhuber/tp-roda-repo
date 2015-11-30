@@ -113,14 +113,5 @@ public interface IAdministracionOV extends Remote {
 	
 	public List <SolicitudCompraDto> obtenerSolicitudesPendientes() throws RemoteException;
 	
-	/**
-	 * Daro
-	 * 
-	 * Toma todas las solicitudes de compra "pendientes" de la base y genera una solicitud de compra.
-	 * 
-	 * @throws RemoteException
-	 */
-	public int crearOrdenCompra(List <SolicitudCompraDto> solicitudesPendientes) throws RemoteException;
-	
 	
 }
