@@ -7,17 +7,21 @@ import java.io.Serializable;
 public class ItemOrdenCompraDto implements Serializable{
 
 	private static final long serialVersionUID = 1L;
+	private int nroItemOrdenCompra;
 	private RodamientoDto rodamiento;
 	private float monto;
 	private int cantidad;
+
 	
-	public ItemOrdenCompraDto(RodamientoDto rodamiento, float monto,
-			int cantidad) {
+	
+	public ItemOrdenCompraDto(int nroItemOrdenCompra, RodamientoDto rodamiento, float monto, int cantidad) {
+		super();
+		this.nroItemOrdenCompra = nroItemOrdenCompra;
 		this.rodamiento = rodamiento;
 		this.monto = monto;
 		this.cantidad = cantidad;
 	}
-	
+
 	public ItemOrdenCompraDto() {
 
 	}
@@ -45,5 +49,14 @@ public class ItemOrdenCompraDto implements Serializable{
 	public void setCantidad(int cantidad) {
 		this.cantidad = cantidad;
 	}
+
+	public int getNroItemOrdenCompra() {
+		return nroItemOrdenCompra;
+	}
+
+	public void setNroItemOrdenCompra(int nroItemOrdenCompra) {
+		this.nroItemOrdenCompra = nroItemOrdenCompra;
+	}
+	
 	
 }

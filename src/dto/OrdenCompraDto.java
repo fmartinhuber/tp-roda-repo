@@ -16,14 +16,13 @@ public class OrdenCompraDto implements Serializable{
 	private ProveedorDto proveedor; 	
 	private List <CotizacionDto> listaCotizaciones;
 	private String estado;
+	private List <SolicitudCompraDto> solicitudesCompra;
 	
 	
-	
-	public OrdenCompraDto(int numeroOrdenCompra, String formaPago, float total,
-			float descuento, List<ItemOrdenCompraDto> items,
-			ProveedorDto proveedor, List<CotizacionDto> listaCotizaciones,
-			String estado) {
-		super();
+
+	public OrdenCompraDto(int numeroOrdenCompra, String formaPago, float total, float descuento,
+			List<ItemOrdenCompraDto> items, ProveedorDto proveedor, List<CotizacionDto> listaCotizaciones,
+			String estado, List<SolicitudCompraDto> solicitudesCompra){
 		this.numeroOrdenCompra = numeroOrdenCompra;
 		this.formaPago = formaPago;
 		this.total = total;
@@ -32,6 +31,7 @@ public class OrdenCompraDto implements Serializable{
 		this.proveedor = proveedor;
 		this.listaCotizaciones = listaCotizaciones;
 		this.estado = estado;
+		this.solicitudesCompra = solicitudesCompra;
 	}
 
 	public OrdenCompraDto(){
@@ -101,5 +101,13 @@ public class OrdenCompraDto implements Serializable{
 	public void setNumeroOrdenCompra(int numeroOrdenCompra) {
 		this.numeroOrdenCompra = numeroOrdenCompra;
 	}
-	
+
+	public List<SolicitudCompraDto> getSolicitudesCompra() {
+		return solicitudesCompra;
+	}
+
+	public void setSolicitudesCompra(List<SolicitudCompraDto> solicitudesCompra) {
+		this.solicitudesCompra = solicitudesCompra;
+	}
+
 }
