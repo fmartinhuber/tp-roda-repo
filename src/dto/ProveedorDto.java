@@ -1,7 +1,6 @@
 package dto;
 
 import java.io.Serializable;
-import java.util.*;
 
 
 
@@ -12,17 +11,9 @@ public class ProveedorDto implements Serializable{
 	private int nroProveedor;
 	private String nombre;
 	private String CUIT;
-	//private List<RodamientoDto> Rodamientos;
 	
 	
-//	public ProveedorDto(int nroProv, String nombre, String CUIT, List<RodamientoDto> rodamientos) {
-//		super();
-//		this.nroProveedor = nroProv;
-//		this.nombre = nombre;
-//		this.CUIT = CUIT;
-//		Rodamientos = rodamientos;
-//	}
-
+	
 	public ProveedorDto(){
 		
 	}
@@ -50,14 +41,6 @@ public class ProveedorDto implements Serializable{
 		this.CUIT = CUIT;
 	}
 
-//	public List<RodamientoDto> getRodamientos() {
-//		return Rodamientos;
-//	}
-//
-//	public void setRodamientos(List<RodamientoDto> rodamientos) {
-//		Rodamientos = rodamientos;
-//	}
-		
 	public int getNroProveedor() {
 		return nroProveedor;
 	}
