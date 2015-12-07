@@ -29,7 +29,7 @@ public interface IAdministracionOV extends Remote {
 	public int crearCotizacion (List <ItemDto> listaItems, ClienteDto clienteDto) throws RemoteException;
 	
 	//Actualiza el estado a "cotizada", devuelve float que es el precio de la Cotizacion
-	public float cotizarCotizacion (int idCotizacion);
+	public float cotizarCotizacion (int idCotizacion) throws RemoteException;
 	
 	//Actualiza el estado a "aprobada"
 	public void aprobarCotizacion (int idCotizacion) throws RemoteException;
@@ -68,9 +68,12 @@ public interface IAdministracionOV extends Remote {
 	 * la confección de los envíos correspondientes y su posterior despacho a cada cliente, junto con la factura 
 	 * y el remito correspondiente.
 	 * 
-	 * Coloquialmente: EnvioAOVDto es la clase que se genera cuando CC le pasa las cosas a la OV, este metodo
+	 * Coloquialmente: BultoDto es la clase que se genera cuando CC le pasa las cosas a la OV, este metodo
 	 * usa el Remito para generar esta nueva clase, la cual sera usada por la OV de aca en mas. Es solo una 
 	 * transformacion de documento
+	 * 
+	 * Cambios!!: Bulto deja de existir ya que no es algo persistible. Solamente se enviara el Remito
+	 * generados en CC a OV
 	 * 
 	 * Lo hace: Daro
 	 * 
@@ -78,7 +81,7 @@ public interface IAdministracionOV extends Remote {
 	 * @return EnvioAOVDto
 	 * @throws RemoteException
 	 */
-	public void entregaPedidos (int idRemito, int idFactura) throws RemoteException;
+	public void entregaPedidos (int idRemito) throws RemoteException;
 	
 	
 	
