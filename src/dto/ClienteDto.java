@@ -12,7 +12,7 @@ public class ClienteDto implements Serializable{
 	private String mail;
 	private String CUIT;
 	private String ov;
-	
+	private String password;
 	
 	public ClienteDto(int numeroCliente, String razonSocial, String mail,
 			String CUIT) {
@@ -65,6 +65,14 @@ public class ClienteDto implements Serializable{
 
 	public void setOv(String ov) {
 		this.ov = ov;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
 	

@@ -121,7 +121,7 @@ public interface IAdministracionOV extends Remote {
 	
 	public List <SolicitudCompraDto> obtenerSolicitudesPendientes() throws RemoteException;
 	
-	public ClienteDto obtenerUsuario (String usuario, String contrasena) throws RemoteException;
+	public ClienteDto obtenerUsuario(String usuario, String contrasena) throws RemoteException;
 	
 	public ClienteDto obtenerUsuarioLogueado () throws RemoteException;
 }
