@@ -11,7 +11,7 @@ public class ClienteDto implements Serializable{
 	private String razonSocial;
 	private String mail;
 	private String CUIT;
-	
+	private String ov;
 	
 	
 	public ClienteDto(int numeroCliente, String razonSocial, String mail,
@@ -58,5 +58,14 @@ public class ClienteDto implements Serializable{
 	public void setNumeroCliente(int numeroCliente) {
 		this.numeroCliente = numeroCliente;
 	}
+
+	public String getOv() {
+		return ov;
+	}
+
+	public void setOv(String ov) {
+		this.ov = ov;
+	}
+
 	
 }
