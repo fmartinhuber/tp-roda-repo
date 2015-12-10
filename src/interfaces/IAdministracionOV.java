@@ -26,7 +26,7 @@ public interface IAdministracionOV extends Remote {
 	 * @throws RemoteException
 	 */
 	//Crea la cotizacion y la deja en estado "pendiente". Devuelve el id de la cotizacion creada
-	public int crearCotizacion (List <ItemDto> listaItems, ClienteDto clienteDto) throws RemoteException;
+	public CotizacionDto crearCotizacion (List <ItemDto> listaItems, ClienteDto clienteDto) throws RemoteException;
 	
 	//Actualiza el estado a "cotizada", devuelve float que es el precio de la Cotizacion
 	public float cotizarCotizacion (int idCotizacion) throws RemoteException;
@@ -58,7 +58,7 @@ public interface IAdministracionOV extends Remote {
 	 * @return FacturaDto
 	 * @throws RemoteException
 	 */
-	public int generarFactura (List<CotizacionDto> cotizaciones, ClienteDto cliente) throws RemoteException;
+	public FacturaDto generarFactura (List<CotizacionDto> cotizaciones, ClienteDto cliente) throws RemoteException;
 	
 	
 	
@@ -99,7 +99,7 @@ public interface IAdministracionOV extends Remote {
 	 * Lo hace: A definir (Esto deberia ser lo ultimo en hacerse)
 	 *
 	 * @param ClienteDto, String
-	 * @return Boolean
+	 * @return 
 	 * @throws RemoteException
 	 */
 	public void crearCliente (ClienteDto cliente) throws RemoteException;
@@ -115,13 +115,33 @@ public interface IAdministracionOV extends Remote {
 	 * 
 	 * @throws RemoteException
 	 */
-	public void crearSolicitudCompra (List <CotizacionDto> cotizacionesAprobadas) throws RemoteException;
+	public SolicitudCompraDto crearSolicitudCompra (List <CotizacionDto> cotizacionesAprobadas) throws RemoteException;
 	
+	/**
+	 * @return
+	 * @throws RemoteException
+	 */
 	public List <CotizacionDto> obtenerCotizaciones() throws RemoteException;
 	
+	/**
+	 * @return
+	 * @throws RemoteException
+	 */
 	public List <SolicitudCompraDto> obtenerSolicitudesPendientes() throws RemoteException;
 	
+	/**
+	 * Encargado de obtener el cliente = usuario que se loguea desde la BS.
+	 * @param usuario
+	 * @param contrasena
+	 * @return
+	 * @throws RemoteException
+	 */
 	public ClienteDto obtenerUsuario(String usuario, String contrasena) throws RemoteException;
 	
+	/**
+	 * Volver a obtener el usuario = cliente ya logueado.
+	 * @return
+	 * @throws RemoteException
+	 */
 	public ClienteDto obtenerUsuarioLogueado () throws RemoteException;
 }
