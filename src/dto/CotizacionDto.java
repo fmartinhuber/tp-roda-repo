@@ -87,5 +87,13 @@ public class CotizacionDto implements Serializable{
 	public void setNumeroCotizacion(int numeroCotizacion) {
 		this.numeroCotizacion = numeroCotizacion;
 	}
+
+	@Override
+	public String toString() {
+		return "CotizacionDto [numeroCotizacion=" + numeroCotizacion
+				+ ", items=" + items + ", estado=" + estado + ", cliente="
+				+ cliente + ", fechaCreacion=" + fechaCreacion
+				+ ", fechaVigencia=" + fechaVigencia + "]";
+	}
 	
 }

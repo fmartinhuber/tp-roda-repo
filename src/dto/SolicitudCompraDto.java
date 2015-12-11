@@ -43,5 +43,14 @@ public class SolicitudCompraDto implements Serializable {
 	public void setListaCotizaciones(List<CotizacionDto> listaCotizaciones) {
 		this.listaCotizaciones = listaCotizaciones;
 	}
+
+	@Override
+	public String toString() {
+		return "SolicitudCompraDto [numeroSolicitudCompra="
+				+ numeroSolicitudCompra + ", estado=" + estado
+				+ ", listaCotizaciones=" + listaCotizaciones.toString() + "]";
+	}
+	
+	
 	
 }
