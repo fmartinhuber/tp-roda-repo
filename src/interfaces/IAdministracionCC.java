@@ -70,8 +70,9 @@ public interface IAdministracionCC extends Remote {
 	
 	public OrdenCompraDto crearOrdenCompraXid (List<String> idsCotis, String formaDePago) throws RemoteException;
 	
+	public List <OrdenCompraDto> obtenerOrdenesCompra () throws RemoteException;
 	
-	
+	public void aprobarOrdenCompra (int nroOrden) throws RemoteException;
 	/**
 	 * Casa Central - Punto 5 - Recepcion de rodamientos
 	 * Formalmente: Consiste en la recepcion de la mercaderia solicitada a los proveedores, su control y la 
