@@ -34,11 +34,6 @@ public interface IAdministracionOV extends Remote {
 	//Actualiza el estado a "aprobada"
 	public void aprobarCotizacion (int idCotizacion) throws RemoteException;
 	
-	//No lo vamos a usar
-	//Actualiza el estado a "rechazada"
-	@Deprecated
-	public void rechazarCotizacion (int idCotizacion) throws RemoteException;
-	
 	
 	
 	/** 
