@@ -87,7 +87,8 @@ public interface IAdministracionCC extends Remote {
 	 * @return RemitoDto
 	 * @throws RemoteException
 	 */
-	public int crearRemito (List <OrdenCompraDto> listaOrdenes, ProveedorDto proveedor) throws RemoteException;
+	//public int crearRemito (List <OrdenCompraDto> listaOrdenes, ProveedorDto proveedor) throws RemoteException;
+	public int crearRemito (List <OrdenCompraDto> listaOrdenes) throws RemoteException;
 	
 	
 	/**
