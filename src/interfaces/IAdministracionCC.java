@@ -47,9 +47,9 @@ public interface IAdministracionCC extends Remote {
 	 */	
 	public List <RodamientoDto> obtenerListaComparativa () throws RemoteException;
 	
-	public List <RodamientoDto> obtenerListaComparativaOpcional () throws RemoteException;
+	//public List <RodamientoDto> obtenerListaComparativaOpcional () throws RemoteException;
 	
-	public void actualizarListaComparativa(List <RodamientoDto> listado) throws RemoteException;
+	//public void actualizarListaComparativa(List <RodamientoDto> listado) throws RemoteException;
 	
 	
 	
@@ -88,7 +88,7 @@ public interface IAdministracionCC extends Remote {
 	 * @throws RemoteException
 	 */
 	//public int crearRemito (List <OrdenCompraDto> listaOrdenes, ProveedorDto proveedor) throws RemoteException;
-	public int crearRemito (List <OrdenCompraDto> listaOrdenes) throws RemoteException;
+	public RemitoDto crearRemito (List <OrdenCompraDto> listaOrdenes) throws RemoteException;
 	
 	
 	/**
