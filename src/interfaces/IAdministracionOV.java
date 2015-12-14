@@ -76,7 +76,7 @@ public interface IAdministracionOV extends Remote {
 	 * @return EnvioAOVDto
 	 * @throws RemoteException
 	 */
-	public void entregaPedidos (int idRemito) throws RemoteException;
+	public void entregaPedidos (RemitoDto remDto) throws RemoteException;
 	
 	
 	
