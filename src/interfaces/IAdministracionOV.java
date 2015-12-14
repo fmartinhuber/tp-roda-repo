@@ -78,6 +78,22 @@ public interface IAdministracionOV extends Remote {
 	 */
 	public void entregaPedidos (RemitoDto remDto) throws RemoteException;
 	
+	/**
+	 * Casa Central - Punto 5 - Recepcion de rodamientos
+	 * Formalmente: Consiste en la recepcion de la mercaderia solicitada a los proveedores, su control y la 
+	 * confeccion de los bultos para las OV. 
+	 * 
+	 * Coloquialmente: Recibe ordenes de compra parciales o completas y emite remitos a las OV.
+	 * OJO: Genera varios XML molestos
+	 * 
+	 * Lo hace: Rama
+	 * 
+	 * @param List <OrdenCompraDto>
+	 * @return RemitoDto
+	 * @throws RemoteException
+	 */
+	//public int crearRemito (List <OrdenCompraDto> listaOrdenes, ProveedorDto proveedor) throws RemoteException;
+	public RemitoDto crearRemito (List <OrdenCompraDto> listaOrdenes) throws RemoteException;
 	
 	
 	/** 
