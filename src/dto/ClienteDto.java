@@ -75,5 +75,12 @@ public class ClienteDto implements Serializable{
 		this.password = password;
 	}
 
+	@Override
+	public String toString() {
+		return "ClienteDto [numeroCliente=" + numeroCliente + ", razonSocial="
+				+ razonSocial + ", mail=" + mail + ", CUIT=" + CUIT + ", ov="
+				+ ov + ", password=" + password + "]";
+	}
+
 	
 }
