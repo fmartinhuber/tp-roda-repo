@@ -157,4 +157,6 @@ public interface IAdministracionOV extends Remote {
 	public ClienteDto obtenerUsuarioLogueado () throws RemoteException;
 	
 	public CotizacionDto obtenerCotizaciones(int id) throws RemoteException;
+	
+	public List <RodamientoDto> obtenerRodamientos() throws RemoteException;
 }
